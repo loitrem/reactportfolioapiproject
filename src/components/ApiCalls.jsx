@@ -1,6 +1,8 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios'
 import Main from './Main';
+import apikeys from '../models/apikeys.js'
+
 
 function ApiCalls() {
 
@@ -17,7 +19,7 @@ function ApiCalls() {
         let res = await axios.get('https://api.github.com/users/loitrem', {
                 method: "GET",
                 headers: {
-                    'Authorization': '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',
+                    'Authorization': apikeys.REACT_APP_GITHUB_API_KEY,
                 }
             });
         setGitHubData(res.data);
@@ -42,7 +44,7 @@ function ApiCalls() {
         let res = await axios.get(weatherSearch, {
                 method: "GET",
                 headers: {
-                    'Authorization': '8b923b04d5a9435a9ab155803233107',
+                    'Authorization': apikeys.REACT_APP_WEATHER_API_KEY,
                 }
             });
         setWeatherData(res.data);
