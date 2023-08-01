@@ -8,7 +8,7 @@ console.log('mainContext');
     const AppContextProvider = (props) => {
 
     //sets the userState (creating state)
-    // const [data, setData] = useState(null);
+    const [weatherData, setWeatherData] = useState(null);
     // const [call, setCall] = useState('');
     // const [cat, setCat] = useState('');
     // const [product, setProduct]=useState(1);
@@ -19,6 +19,8 @@ console.log('mainContext');
             //gives state access to entire app
             <AppContext.Provider value={{
                 // add the use states to the provider
+                weatherData,
+                setWeatherData
 
             }}> 
         {props.children}

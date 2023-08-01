@@ -23,19 +23,18 @@ function ApiCalls() {
                 }
             });
         setGitHubData(res.data);
-        console.log(res.data);
     }
 
     //get ip address
     const getIpData = async() => {
         let res = await axios.get(`https://api.ipify.org?format=json`);
         setIpData(res.data.ip);
-        console.log('IP IS IN CALL = ',res.data.ip);
     }
 
     //weather api
     const getWeatherData = async() => {
         let weatherSearch = null;
+        
         if (ipData){
             weatherSearch = `http://api.weatherapi.com/v1/current.json?key=8b923b04d5a9435a9ab155803233107&q=${ipData}&aqi=no`;
         } else {
@@ -48,7 +47,6 @@ function ApiCalls() {
                 }
             });
         setWeatherData(res.data);
-        console.log(res.data);
     }
 
 
