@@ -20,7 +20,6 @@ function Weather() {
                         <div className="weatherConditionText">Currently: </div>
                         <div className="weatherConditionData">{weatherData.current.condition.text}<img src={weatherData.current.condition.icon} alt="" className="weatherIcon" /></div> 
                     </div>
-                    <div>{weatherData.ip}</div>
                 </div>
             </div>
         )

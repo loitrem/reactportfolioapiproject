@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "Router": "^2.1.0",
     "save": "^2.9.0",
+    "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

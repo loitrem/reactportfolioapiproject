@@ -1,10 +1,31 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import { AppContext } from '../context/mainContext';
+import erik from '../images/erik3.png'
+import Typed from 'typed.js'
 
 function Main(props) {
     let {setWeatherData}=useContext(AppContext);
     setWeatherData(props.weather)
-    console.log('props',props.weather);
+    console.log('props',props);
+
+    const typeVar = React.useRef(null);
+    const descVar = React.useRef(null);
+
+    useEffect(()=> {
+        const typed = new Typed(typeVar.current, {
+            strings: ["Hi, I'm Erik. " + "<br/><br/><span style='font-size: 20px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'],
+            typeSpeed: 150,
+            loop: false
+        })
+
+        return ()=>{
+            typed.destroy();
+        } ;
+
+    }, []);
+
+
+
     return (
         // main wrapper start
         <div className="mainWrapper">
@@ -14,15 +35,27 @@ function Main(props) {
                 <div className="mainBannerWrapper">
                     {/* main banner start */}
                     <div className="mainBanner">
+                        {/* main banner left start */}
+                        <div className="mainBannerLeft">
+                            <div className="bioPage">
 
-                        {/* temp - remove later */}
-                        <div className="mainGithub">
-                            <div className="usename">Username: {props.github.login}</div>
-                            <div className="name">Name: {props.github.name}</div>
+                                <div className="bioHello">{'> '}<span ref={typeVar}></span></div>
+                                <div className="bioDesc">
+                                    <span ref={descVar}></span>
+                                </div>
+                            </div>
+                        {/* main banner left end */}
                         </div>
-                        {/* temp end -  remove later */}
-
-                        Main Banner
+                        {/* main banner right start */}
+                        <div className="mainBannerRight">
+                            <div className="mainImg">
+                                <div className="userImgWrapper">
+                                    <img src={erik} alt="" className="userImg" />
+                                </div>
+                            </div>
+                        
+                        {/* main banner right end */}
+                        </div>
                     {/* main banner end */}
                     </div>
                 {/* main banner wrapper end */}

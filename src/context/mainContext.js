@@ -9,8 +9,8 @@ console.log('mainContext');
 
     //sets the userState (creating state)
     const [weatherData, setWeatherData] = useState(null);
-    // const [call, setCall] = useState('');
-    // const [cat, setCat] = useState('');
+    const [githubData, setGithubData] = useState('');
+    const [ip, setIP] = useState('');
     // const [product, setProduct]=useState(1);
     // const [productNum, setProductNum]=useState(1);
     // const [categories, setCategories]=useState('');
@@ -20,7 +20,13 @@ console.log('mainContext');
             <AppContext.Provider value={{
                 // add the use states to the provider
                 weatherData,
-                setWeatherData
+                setWeatherData,
+
+                githubData,
+                setGithubData,
+
+                ip,
+                setIP
 
             }}> 
         {props.children}
