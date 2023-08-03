@@ -10,6 +10,7 @@ function ApiCalls() {
     let [weatherData, setWeatherData]=useState(null)
     let [gitHubData, setGitHubData]=useState(null)
     let [ipData, setIpData]=useState(null)
+    let [locationData, setLocationData]=useState(null)
 
     //use context here - ?
 
@@ -31,12 +32,19 @@ function ApiCalls() {
         setIpData(res.data.ip);
     }
 
+    //location api
+    const getLocationData = async() => {
+        let res = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apikeys.REACT_APP_IP_KEY}&ip=${ipData}`);
+        console.log('LOCATION RES = ',res.data);
+        setLocationData(res.data);
+    }
+
     //weather api
     const getWeatherData = async() => {
         let weatherSearch = null;
         
         if (ipData){
-            weatherSearch = `http://api.weatherapi.com/v1/current.json?key=8b923b04d5a9435a9ab155803233107&q=${ipData}&aqi=no`;
+            weatherSearch = `http://api.weatherapi.com/v1/current.json?key=8b923b04d5a9435a9ab155803233107&q=${locationData.latitude,locationData.longitude}&aqi=no`;
         } else {
             weatherSearch = `http://api.weatherapi.com/v1/current.json?key=8b923b04d5a9435a9ab155803233107&q=Pittsburgh&aqi=no`;
         }
@@ -55,6 +63,11 @@ console.log(ipData);
         getGitHubData()
         getWeatherData()
         getIpData()
+        console.log(`DATA = `, ipData);
+        if (ipData){
+            console.log('GOT HERE');
+            getLocationData()
+        }
 
     },[ipData])
         //  loaded function for when data is fetched

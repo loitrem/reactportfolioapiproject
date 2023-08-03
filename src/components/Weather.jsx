@@ -23,6 +23,28 @@ function Weather() {
                 </div>
             </div>
         )
+    } else {
+    
+        return (
+            <div className="weatherWrapper">
+                <div className="mainWeather">
+                    <div className="location">
+                        <div className="locationText">Location: </div>
+                        <div className="locationData"></div>
+                    </div>
+                    <div className="currentTemp">
+                        <div className="currentTempText">Current Temp:</div> 
+                        <div className="currentTempData">°F</div>
+                    </div>
+                    <div className="weatherCondition">
+                        <div className="weatherConditionText">Currently: </div>
+                        <div className="weatherConditionData"><img src='' alt="" className="weatherIcon" /></div> 
+                    </div>
+                </div>
+            </div>
+        )
+        
+
     }
 }
 
