@@ -48,8 +48,8 @@
 }
 
 .header {
-  width: 90%;
-
+  width: 100%;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -60,14 +60,18 @@ width: 100%;
 
 .headerBottom {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid gray;
 }
 
 .headerLeft {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: left;
 }
@@ -79,60 +83,63 @@ width: 100%;
 
 .headerRight {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: right;
 }
 
 .website {
-  margin-top: 35px;
+  margin-top: 35px;  
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(67, 172, 99);
 }
 
 .websiteLink {
-  margin-right: 50px;
+  margin-right: 20px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: bold;
-  color: rgba(71,144,252,255);
+  color: rgb(67, 172, 99);
 }
 
 .websiteLink:hover {
-  margin-right: 50px;
+  margin-right: 20px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: bold;
-  color: rgb(30, 18, 255);
+  color: rgb(135, 177, 148);
 }
 
 .contactMe {
   margin-top: 35px;
-  margin-left: 50px;
-  margin-right: 35px;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(67, 172, 99);
 }
 
-.contactMeBtn {
-  height: 50px;
-  width: 150px;
-  border: solid gray;
-  border-radius: 25px;
-  color: gray;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: rgb(32, 32, 32);
+.headerNavWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.contactMeBtn:hover {
-  height: 50px;
-  width: 150px;
-  border: solid rgba(71,144,252,255);
-  border-radius: 25px;
-  color: rgba(71,144,252,255);
-  font-size: 18px;
-  font-weight: bold;
-}
 
 /* NAVBAR ************************************************************************************** */
+
+.navWrapper {
+  width: 100%;
+}
+
 .nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

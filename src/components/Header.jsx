@@ -10,17 +10,15 @@ function Header() {
             <div className="header">
                 <div className="headerBottom">
                     <div className="headerLeft">
-            
+                    <div className="headerNavWrapper">
+                        <Nav />
+                    </div>
                     </div>
                     <div className="headerRight">
-                        <div className="website"><a href="http://loitrem.tplinkdns.com/perscholas/" className="websiteLink">www.loitrem.com</a></div>
-                        <div className="contactMe"><button className="contactMeBtn">Get in Touch</button></div>
+                    <div className="contactMe">{"const UserInfo={ Email: ekowalski1982@gmail.com,"}</div>
+                        <div className="website">Website: <a href="http://loitrem.tplinkdns.com/perscholas/" className="websiteLink">loitrem.com {'};'}</a></div>
                     </div>
-                </div>
-                <div className="headerNavWrapper">
-                    <Nav />
-                </div>
-                
+                </div>              
             </div>
         </div>
     )

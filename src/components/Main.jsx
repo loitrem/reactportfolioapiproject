@@ -2,16 +2,20 @@ import React, {useContext, useEffect} from 'react'
 import { AppContext } from '../context/mainContext';
 import erik from '../images/erik3.png'
 import Typed from 'typed.js'
+import Nav from './Nav';
 
 function Main(props) {
     let {setWeatherData}=useContext(AppContext);
     setWeatherData(props.weather)
     console.log('props',props);
 
+    //typed.js dependency/library @ https://github.com/mattboldt/typed.js
     const typeVar = React.useRef(null);
     const descVar = React.useRef(null);
 
     useEffect(()=> {
+
+        //typed.js dependency/library @ https://github.com/mattboldt/typed.js
         const typed = new Typed(typeVar.current, {
             strings: ["Hi, I'm Erik. " + "<br/><br/><span style='font-size: 20px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'],
             typeSpeed: 150,
@@ -65,7 +69,7 @@ function Main(props) {
                 <div className="bioWrapper">
                     {/* bio start */}
                     <div className="bio">
-                        Bio
+                        
                     {/* bio end */}
                     </div>
                 {/* bio wrapper end */}
