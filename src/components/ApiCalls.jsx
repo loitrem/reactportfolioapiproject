@@ -33,17 +33,20 @@ function ApiCalls() {
     }
 
     //location api
+
     const getLocationData = async() => {
-        let res = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apikeys.REACT_APP_IP_KEY}&ip=${ipData}`);
-        console.log('LOCATION RES = ',res.data);
-        setLocationData(res.data);
-    }
+        if (ipData){ 
+            let res = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apikeys.REACT_APP_IP_KEY}&ip=${ipData}`);
+            console.log('LOCATION RES = ',res.data);
+            setLocationData(res.data);
+            }
+        }
 
     //weather api
     const getWeatherData = async() => {
         let weatherSearch = null;
         
-        if (ipData){
+        if (locationData){
             weatherSearch = `http://api.weatherapi.com/v1/current.json?key=8b923b04d5a9435a9ab155803233107&q=${locationData.latitude,locationData.longitude}&aqi=no`;
         } else {
             weatherSearch = `http://api.weatherapi.com/v1/current.json?key=8b923b04d5a9435a9ab155803233107&q=Pittsburgh&aqi=no`;
