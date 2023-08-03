@@ -49,7 +49,7 @@ function ApiCalls() {
         setWeatherData(res.data);
     }
 
-
+console.log(ipData);
     useEffect(()=>{
 
         getGitHubData()

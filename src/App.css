@@ -174,12 +174,12 @@ width: 100%;
   color: whitesmoke;
 }
 
-.technology {
+.navLinks {
   font-size: 24px;
   font-weight: bold;
 }
 
-.technology:hover {
+.navLinks:hover {
   font-size: 24px;
   font-weight: bold;
   color: rgb(135, 177, 148);

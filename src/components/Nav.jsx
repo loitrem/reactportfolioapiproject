@@ -7,16 +7,16 @@ const navigate = useNavigate();
     return (
         <div className="navWrapper">
             <div className="nav">
-            <div className="technology" onClick={()=>{
-                    navigate('/resume');
+            <div className="navLinks" onClick={()=>{
+                    navigate('/');
                 }}>{"<Home />"}</div>
-                <div className="technology" onClick={()=>{
-                    navigate('/resume');
+                <div className="navLinks" onClick={()=>{
+                    navigate('/technologies');
                 }}>{"<Technologies />"}</div>
-                <div className="technology" onClick={()=>{
+                <div className="navLinks" onClick={()=>{
                     navigate('/');
                 }}>{"<Projects />"}</div>
-                <div className="technology">{"<AboutMe />"}</div>
+                <div className="navLinks">{"<AboutMe />"}</div>
             </div>
         </div>
     )
