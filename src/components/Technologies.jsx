@@ -5,46 +5,69 @@ import cssImg from '../images/css.png'
 import htmlImg from '../images/html.png'
 import javaImg from '../images/java.png'
 import nodeImg from '../images/node.png'
-import npmImg from '../images/npm.png'
+import phpImg from '../images/php.png'
+import sqlImg from '../images/sql.png'
+import matrix from '../images/matrix.gif'
 
 function Technologies() {
 
-  return (
+return (
 
 
-    <div className="technologyWrapper">
+    <div className="technologyWrapper" style={{backgroundImage: `url(${matrix})`, backgroundSize: 'cover'}}>
         <div className="technology">
-            <div className="techCell">
+            <div className="techCell topCell">
                 <div className="techCellLeft">
-                    <img className='techJsImg' src={reactImg} alt="" />
+                    <img className='techReactImg' src={reactImg} alt="" />
                 </div>
                 <div className="techCellRight">React</div>
             </div>
 
             <div className="techCell">
                 <div className="techCellLeft">
-                    <img className='techJsImg' src={javascriptImgImg} alt="" />
+                    <img className='techJsImg' src={javascriptImg} alt="" />
                 </div>
                 <div className="techCellRight">JavaScript</div>
             </div>
 
             <div className="techCell">
                 <div className="techCellLeft">
-                    <img className='techJsImg' src={htmlImg} alt="" />
+                    <img className='techHtmlImg' src={htmlImg} alt="" />
                 </div>
                 <div className="techCellRight">Html</div>
             </div>
 
             <div className="techCell">
                 <div className="techCellLeft">
-                    <img className='techJsImg' src={cssImg} alt="" />
+                    <img className='techCssImg' src={cssImg} alt="" />
                 </div>
                 <div className="techCellRight">Css</div>
             </div>
 
             <div className="techCell">
                 <div className="techCellLeft">
-                    <img className='techJsImg' src={nodeImg} alt="" />
+                    <img className='techJavaImg' src={javaImg} alt="" />
+                </div>
+                <div className="techCellRight">Java</div>
+            </div>
+
+            <div className="techCell">
+                <div className="techCellLeft">
+                    <img className='techPhpImg' src={phpImg} alt="" />
+                </div>
+                <div className="techCellRight">Php</div>
+            </div>
+
+            <div className="techCell">
+                <div className="techCellLeft">
+                    <img className='techSqlImg' src={sqlImg} alt="" />
+                </div>
+                <div className="techCellRight">Sql</div>
+            </div>
+
+            <div className="techCell">
+                <div className="techCellLeft">
+                    <img className='techNodeImg' src={nodeImg} alt="" />
                 </div>
                 <div className="techCellRight">Node.js</div>
             </div>

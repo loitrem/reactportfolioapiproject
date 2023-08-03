@@ -338,38 +338,58 @@ width: 100%;
 
 .technologyWrapper {
   width: 100%;
+  background-color: rgb(32, 32, 32);
 }
 
 .technology {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  border: solid red;
+  background-color: rgb(32, 32, 32);
 }
 
 .techCell {
   display: flex;
+  height: 255px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(69, 69, 69);
+  border-right: 1px solid rgb(69, 69, 69);
+  border-left: 1px solid rgb(69, 69, 69);
+  transition: height 1s;
 }
 
-.techCellLeft {
-  margin-right: 30px;
+.techCell:hover {
+  height: 300px;
+  background-color: rgb(42, 42, 42);
+}
 
+.topCell {
+  border-top: 1px solid rgb(69, 69, 69);
+}
+
+.techCellLeft{
   width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.techJsImg {
+.techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
   height: 250px;
 }
 
-.techCellRight {
 
-  width: 75%;
+.techCellRight {
+  width: 50%;
   display: flex;
   justify-content: left;
   align-items: center;
   font-size: 50px;
   text-align: left;
+  transition: height 1s;
 }
+
 
 /* FOOTER *************************************************************************************** */
 
