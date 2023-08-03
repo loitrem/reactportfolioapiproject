@@ -334,6 +334,43 @@ width: 100%;
   margin-left: 100px;
 }
 
+/* Technologies ********************************************************************************* */
+
+.technologyWrapper {
+  width: 100%;
+}
+
+.technology {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid red;
+}
+
+.techCell {
+  display: flex;
+}
+
+.techCellLeft {
+  margin-right: 30px;
+
+  width: 25%;
+}
+
+.techJsImg {
+  height: 250px;
+}
+
+.techCellRight {
+
+  width: 75%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 50px;
+  text-align: left;
+}
+
 /* FOOTER *************************************************************************************** */
 
 .footerWrapper {
