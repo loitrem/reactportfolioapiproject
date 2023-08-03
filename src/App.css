@@ -1,4 +1,6 @@
 .App {
+  height: 100vh;
+  width: 100vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -45,6 +47,8 @@
 /* HEADER PAGE *********************************************************************************** */
 .headerWrapper {
   width: 100%;
+  /* background-color: rgb(24, 6, 146); */
+  color: whitesmoke;
 }
 
 .header {
@@ -66,7 +70,7 @@ width: 100%;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(65, 65, 65);
 }
 
 .headerLeft {
@@ -94,32 +98,55 @@ width: 100%;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  color: rgb(67, 172, 99);
+  color: whitesmoke;
 }
 
 .websiteLink {
-  margin-right: 20px;
+  margin-right: 2px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  color: rgb(67, 172, 99);
+  color: whitesmoke;
 }
 
 .websiteLink:hover {
-  margin-right: 20px;
+  margin-right: 2px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  color: rgb(135, 177, 148);
+  color: rgb(200, 206, 40);
 }
 
 .contactMe {
   margin-top: 35px;
   margin-right: 15px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  color: rgb(67, 172, 99);
+  color: whitesmoke;
+  display: flex;
+}
+
+.const {
+  color: rgb(110, 110, 255);
+  margin-right: 10px;
+}
+
+.userInfo {
+  color: rgb(255, 255, 187);
+  margin-right: 5px;
+}
+
+.equals {
+  margin-right: 5px;
+}
+
+.bracket {
+  color: yellow;
+}
+
+.objItem {
+  color: rgb(153, 198, 220);
 }
 
 .headerNavWrapper {
@@ -134,20 +161,38 @@ width: 100%;
 
 .navWrapper {
   width: 100%;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .nav {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  color: whitesmoke;
 }
 
+.technology {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.technology:hover {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(135, 177, 148);
+  cursor: pointer;
+}
 
 /* WEATHER PAGE ******************************************************************************** */
 
 .weatherWrapper {
   width: 100%;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(65, 65, 65);
+  background-color: rgb(32, 32, 32);
+  font-size: 16px;
 }
 
 .mainWeather {
@@ -258,22 +303,17 @@ width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:end;
   justify-content: center;
   font-family:monospace;
 }
 
-.bioHello {
+.bioDesc {
   font-size: 60px;
   font-weight: bold;
-  width: 60%;
+  width: 80%;
   margin-bottom: 60px;
-}
-
-.bioDesc {
-  width: 55%;
   text-align: left;
-  font-size: 20px;
 }
 
 .bioWrapper {

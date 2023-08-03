@@ -17,8 +17,8 @@ function Main(props) {
 
         //typed.js dependency/library @ https://github.com/mattboldt/typed.js
         const typed = new Typed(typeVar.current, {
-            strings: ["Hi, I'm Erik. " + "<br/><br/><span style='font-size: 20px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'],
-            typeSpeed: 150,
+            strings: ["Hi, I'm Erik. " + "<br/><br/><span style='font-size: 26px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'],
+            typeSpeed: 100,
             loop: false
         })
 
@@ -43,10 +43,7 @@ function Main(props) {
                         <div className="mainBannerLeft">
                             <div className="bioPage">
 
-                                <div className="bioHello">{'> '}<span ref={typeVar}></span></div>
-                                <div className="bioDesc">
-                                    <span ref={descVar}></span>
-                                </div>
+                                <div className="bioDesc">{'> '}<span ref={typeVar}></span></div>
                             </div>
                         {/* main banner left end */}
                         </div>
@@ -69,37 +66,10 @@ function Main(props) {
                 <div className="bioWrapper">
                     {/* bio start */}
                     <div className="bio">
-                        
+
                     {/* bio end */}
                     </div>
                 {/* bio wrapper end */}
-                </div>
-                {/* technologies wrapper start */}
-                <div className="technologiesWrapper">
-                    {/* technologies start */}
-                    <div className="technologies">
-                        technologies
-                    {/* technologies end */}
-                    </div>
-                {/* technologies wrapper end */}
-                </div>
-                {/* projects wrapper start */}
-                <div className="projectsWrapper">
-                    {/* projects start */}
-                    <div className="projects">
-                        projects
-                    {/* projects end */}
-                    </div>
-                {/* projects wrapper end */}
-                </div>
-                {/* footer wrapper start */}
-                <div className="footerWrapper">
-                    {/* footer start */}
-                    <div className="footer">
-                        footer
-                    {/* footer end */}
-                    </div>
-                {/* footer wrapper end */}
                 </div>
             {/* main end */}
             </div>
