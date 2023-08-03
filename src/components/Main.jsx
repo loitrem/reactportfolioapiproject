@@ -2,7 +2,8 @@ import React, {useContext, useEffect} from 'react'
 import { AppContext } from '../context/mainContext';
 import erik from '../images/erik3.png'
 import Typed from 'typed.js'
-import Nav from './Nav';
+import backgroundImg from '../images/sepic2.jpg'
+import coding from '../images/coding.png'
 
 function Main(props) {
     let {setWeatherData}=useContext(AppContext);
@@ -11,7 +12,6 @@ function Main(props) {
 
     //typed.js dependency/library @ https://github.com/mattboldt/typed.js
     const typeVar = React.useRef(null);
-    const descVar = React.useRef(null);
 
     useEffect(()=> {
 
@@ -27,8 +27,6 @@ function Main(props) {
         } ;
 
     }, []);
-
-
 
     return (
         // main wrapper start
@@ -63,10 +61,15 @@ function Main(props) {
                 </div>
                     
                 {/* bio wrapper start */}
-                <div className="bioWrapper">
+                <div className="fillerWrapper">
                     {/* bio start */}
-                    <div className="bio">
-
+                    <div className="filler" style={{ 
+                    backgroundImage: `url('${backgroundImg}')`,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'none',
+                    backgroundSize: 'cover'
+                    }}>
+                        {/* <img src={coding} alt="" className="coding" /> */}
                     {/* bio end */}
                     </div>
                 {/* bio wrapper end */}

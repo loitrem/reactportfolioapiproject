@@ -260,7 +260,7 @@ width: 100%;
 
 .mainBannerWrapper {
   width: 100%;
-  border-bottom: solid black;
+  border-bottom: 1px solid rgb(65, 65, 65);
 }
 
 .mainBanner {
@@ -316,25 +316,27 @@ width: 100%;
   text-align: left;
 }
 
-.bioWrapper {
+.fillerWrapper {
   width: 100%;
   height: 300px;
 }
-
-.technologiesWrapper {
+.filler {
+  height: 100%;
   width: 100%;
-  height: 400px;
-  border: solid purple;
+  opacity: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
-.projectsWrapper {
-  width: 100%;
-  height: 700px;
-  border: solid orange;
+.coding {
+  height: 120%;
+  margin-left: 100px;
 }
-
 .footerWrapper {
   width: 100%;
   height: 300px;
-  border: solid green;
+  border-top: 1px solid rgb(65, 65, 65);
 }
+
+
