@@ -1,8 +1,9 @@
 import React from 'react'
+import ContactInfo from './ContactInfo';
 
 function Resume() {
   return (
-    <div>Resume</div>
+    <div></div>
   )
 }
 

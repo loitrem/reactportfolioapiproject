@@ -67,7 +67,7 @@ function Main(props) {
                     backgroundImage: `url('${backgroundImg}')`,
                     backgroundPosition: 'center',
                     backgroundRepeat: 'none',
-                    backgroundSize: 'cover'
+                    backgroundSize: 'cover',
                     }}>
                         {/* <img src={coding} alt="" className="coding" /> */}
                     {/* bio end */}

@@ -21,7 +21,7 @@ function Header() {
                             <div className="equals">{"="}</div>
                             <div className="bracket">{"{"}</div>
                             <div className="objItem">{" Email:"}</div>
-                            <div>{" 'ekowalski1982@gmail.com',"}</div>
+                            <div >{" 'ekowalski1982@gmail.com',"}</div>
                             <div className="website"> </div> 
                             <div className="objItem">{" Website:"}</div> 
                             <div><a href="http://loitrem.tplinkdns.com/perscholas/" className="websiteLink">'loitrem.com'</a></div>
