@@ -8,7 +8,7 @@ export const AppContext=createContext();
 
     //sets the userState (creating state)
     const [weatherData, setWeatherData] = useState(null);
-    const [githubData, setGithubData] = useState('');
+    const [gitHubData, setGitHubData] = useState('');
     const [ip, setIP] = useState('');
 
     return (
@@ -18,8 +18,8 @@ export const AppContext=createContext();
                 weatherData,
                 setWeatherData,
 
-                githubData,
-                setGithubData,
+                gitHubData,
+                setGitHubData,
 
                 ip,
                 setIP

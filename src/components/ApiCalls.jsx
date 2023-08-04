@@ -74,6 +74,7 @@ console.log(ipData);
             getLocationData()
         }
 
+
     },[ipData])
         //  loaded function for when data is fetched
         const loaded = () => {
