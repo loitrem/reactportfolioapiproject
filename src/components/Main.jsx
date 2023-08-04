@@ -5,7 +5,7 @@ import Typed from 'typed.js'
 import backgroundImg from '../images/sepic2.jpg'
 import coding from '../images/coding.png'
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom";
+
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 

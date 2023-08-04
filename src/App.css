@@ -192,7 +192,7 @@ width: 100%;
 }
 
 .navLinks:hover {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: rgb(135, 177, 148);
   cursor: pointer;
@@ -524,9 +524,87 @@ width: 100%;
 /* PROJECTS ************************************************************************************* */
 
 .projectsWrapper {
+  width: 100%;
+}
 
+.backgroundTop {
+    background-color: rgba(0, 0, 0,0.85);
 }
 
 .projects{
-  
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
+
+.projectCell{
+  width: 100%;
+  display: flex;
+  background-color: rgb(32, 32, 32);
+  border-top: 1px solid rgb(65, 65, 65);
+}
+
+.projectCellLeft {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+
+}
+
+.projectScreenshotImg {
+  width: 95%;
+  border: 2px solid rgb(65, 65, 65);
+}
+
+.projectCellRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 30px;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.projectName {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.projectModified {
+  font-size: 16px;
+}
+
+.projectGithubLink{
+  margin-top: 15px;
+  border: 1px solid green;
+  width: 300px;
+  cursor: pointer;
+}
+
+.projectGithubLink:hover{
+  background-color: green;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+
+
+.projectLiveLink {
+  margin-top: 15px;
+  border: 1px solid green;
+  width: 300px;
+  cursor: pointer;
+}
+
+.projectLiveLink:hover {
+  background-color: green;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+

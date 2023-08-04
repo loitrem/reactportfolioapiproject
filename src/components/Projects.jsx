@@ -6,8 +6,8 @@ import alien from '../images/alien.jpg'
 import atm from '../images/atm.jpg'
 import jungle from '../images/jungle.jpg'
 import rpg from '../images/rpg.jpg'
-import axios from 'axios';
-import apikeys from '../models/apikeys.js'
+import bgImg from '../images/bg2.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -16,10 +16,10 @@ const itemVariants = {
     visible
 };
 
-function Projects() 
-{
+function Projects() {
 
-    let [newGitData, setNewGitData]=useState(null)
+    const navigate = useNavigate();
+
     let {gitHubData, setGitHubData}=useContext(AppContext);
 
     console.log('GITHUBDATA', gitHubData);
@@ -42,6 +42,9 @@ function Projects()
         img: atm
     }]  
     
+    useEffect(()=>{
+
+    },[])
 
 
     if (gitHubData){
@@ -53,38 +56,97 @@ function Projects()
                     projectInfo[a].homepage = current.homepage;
                 } 
             })
-        }
+    
+        }  
     }
 
     console.log('||||||||||||||||||||||',projectInfo);
     return (
         <motion.div className="projectsWrapper" initial="hidden"
-        animate="visible"
-        exit={{ opacity: 0, transition: { duration: 1 } }}
-        variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
-            <motion.div  variants={itemVariants} className="projects">
-
-                {gitHubData? projectInfo.map((current)=>{
-                        console.log('CURRENT = ', current);
-                    <motion.div  variants={itemVariants} className="projectCell">
+            style={{backgroundImage: `url(${bgImg})`, 
+            backgroundSize: 'cover',
+            backgroundAttachment: 'fixed'}}
+            animate="visible"
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
+            <motion.div  variants={itemVariants} className='backgroundTop'>
+                <motion.div  variants={itemVariants} className="projects">
+                    <motion.div variants={itemVariants} className="projectCell">
                         <motion.div  variants={itemVariants} className="projectCellLeft">
                             <motion.div  variants={itemVariants} className="projectCellScreenShot">
-                                <img src={current.img} alt="" className="projectScreenshotImg" />
+                                <img src={projectInfo[0].img} alt="" className="projectScreenshotImg" />
                             </motion.div>
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
-                            <motion.div  variants={itemVariants} className="projectName">{current.displayName}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectDesc">{current.desc}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectModified">Last Modified:</motion.div>
-                            <motion.div  variants={itemVariants} className="projectGithubLink">
-                                <a href={current.html_url} className="projectGit">Check out the repo</a>
+                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[0].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[0].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
+                                {window.location.href =projectInfo[0].html}
+                                }}>Check out the repo
                             </motion.div>
-                            <motion.div  variants={itemVariants} className="projectLiveLink">
-                                <a href={current.homepage} className="projectLive">Test it out</a>
+                            <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
+                                {window.location.href =projectInfo[0].homepage}
+                                }}>Try it out
                             </motion.div>
                         </motion.div>
-                    </motion.div>                  
-                }):null}
+                    </motion.div>  
+
+                    <motion.div variants={itemVariants} className="projectCell">
+                        <motion.div  variants={itemVariants} className="projectCellLeft">
+                            <motion.div  variants={itemVariants} className="projectCellScreenShot">
+                                <img src={projectInfo[1].img} alt="" className="projectScreenshotImg" />
+                            </motion.div>
+                        </motion.div>
+                        <motion.div  variants={itemVariants} className="projectCellRight">
+                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[1].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[1].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
+                                {window.location.href =projectInfo[1].html}
+                                }}>Check out the repo
+                            </motion.div>
+                            <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
+                                {window.location.href =projectInfo[1].homepage}
+                                }}>Try it out
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>  
+
+                    <motion.div  variants={itemVariants} className="projectCell">
+                        <motion.div  variants={itemVariants} className="projectCellLeft">
+                            <motion.div  variants={itemVariants} className="projectCellScreenShot">
+                                <img src={projectInfo[2].img} alt="" className="projectScreenshotImg" />
+                            </motion.div>
+                        </motion.div>
+                        <motion.div  variants={itemVariants} className="projectCellRight">
+                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[2].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[2].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
+                                    {window.location.href =projectInfo[2].html}
+                            }}>Check out the repo</motion.div>
+                            <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
+                                    {window.location.href =projectInfo[2].homepage}
+                            }}>Try it out</motion.div>
+                        </motion.div>
+                    </motion.div> 
+
+                    <motion.div  variants={itemVariants} className="projectCell">
+                        <motion.div  variants={itemVariants} className="projectCellLeft">
+                            <motion.div  variants={itemVariants} className="projectCellScreenShot">
+                                <img src={projectInfo[3].img} alt="" className="projectScreenshotImg" />
+                            </motion.div>
+                        </motion.div>
+                        <motion.div  variants={itemVariants} className="projectCellRight">
+                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[3].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[3].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
+                                    {window.location.href =projectInfo[3].html}
+                            }}>Check out the repo</motion.div>
+                            <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
+                                    {window.location.href =projectInfo[3].homepage}
+                            }}>Try it out</motion.div>
+                        </motion.div>
+                    </motion.div> 
+                </motion.div>
             </motion.div>
         </motion.div>
     )
