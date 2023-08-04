@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from "framer-motion"
-import {useContext} from 'react'
+import {useContext, useState} from 'react'
 import { AppContext } from '../context/mainContext';
 import alien from '../images/alien.jpg'
 import atm from '../images/atm.jpg'
 import jungle from '../images/jungle.jpg'
 import rpg from '../images/rpg.jpg'
 import axios from 'axios';
+import apikeys from '../models/apikeys.js'
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -15,69 +16,66 @@ const itemVariants = {
     visible
 };
 
-let projectInfo = [{
-    name: 'reactgroupretailproject',
-    displayName: 'Retail Mockup',
-    img: jungle
-},{
-    name: 'week6project',
-    displayName: 'Turn based RPG game',
-    img: rpg
-},{
-    name: 'saveTheUniverseGame',
-    displayName: 'Alien Invasion',
-    img: alien
-},{
-    name: 'atmHomework',
-    displayName: 'ATM Mockup',
-    img: atm
-}]
+function Projects() 
+{
 
-function Projects() {
-
+    let [newGitData, setNewGitData]=useState(null)
     let {gitHubData, setGitHubData}=useContext(AppContext);
 
     console.log('GITHUBDATA', gitHubData);
 
-    let displayName = '';
-    let projectImg = null;
+    let projectInfo = [{
+        name: 'reactgroupretailproject',
+        displayName: 'Retail Mockup',
+        img: jungle
+    },{
+        name: 'week6project',
+        displayName: 'Turn based RPG game',
+        img: rpg
+    },{
+        name: 'saveTheUniverseGame',
+        displayName: 'Alien Invasion',
+        img: alien
+    },{
+        name: 'atmHomework',
+        displayName: 'ATM Mockup',
+        img: atm
+    }]  
+    
 
-    const getDateData = async() => {
-        let res = await axios.get('https://api.github.com/users/loitrem/repos?per_page=100&sort=created', {
-                method: "GET",
-                headers: {
-                    'Authorization': apikeys.REACT_APP_GITHUB_API_KEY,
-                }
-            });
-        return (res.data[0].comit.author.date);
+
+    if (gitHubData){
+        for (let a = 0;a<projectInfo.length;a++){   
+            gitHubData.map((current, i)=>{
+                if (current.name===projectInfo[a].name){
+                    projectInfo[a].desc = current.description;
+                    projectInfo[a].html = current.html_url;
+                    projectInfo[a].homepage = current.homepage;
+                } 
+            })
+        }
     }
 
+    console.log('||||||||||||||||||||||',projectInfo);
     return (
         <motion.div className="projectsWrapper" initial="hidden"
         animate="visible"
         exit={{ opacity: 0, transition: { duration: 1 } }}
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
-
             <motion.div  variants={itemVariants} className="projects">
 
-                {gitHubData.map((current, i)=>{
-                    for (let a = 0;a<projectInfo.length;a++){
-                        if (current===projectInfo[a].name){
-                                displayName = projectInfo[a].displayName;
-                                projectImg = projectInfo[a].img;
-                        }
-                    }
-
-                    <motion.div key={i}  variants={itemVariants} className="projectCell">
+                {gitHubData? projectInfo.map((current)=>{
+                        console.log('CURRENT = ', current);
+                    <motion.div  variants={itemVariants} className="projectCell">
                         <motion.div  variants={itemVariants} className="projectCellLeft">
                             <motion.div  variants={itemVariants} className="projectCellScreenShot">
-                                <img src={projectImg} alt="" className="projectScreenshotImg" />
+                                <img src={current.img} alt="" className="projectScreenshotImg" />
                             </motion.div>
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
-                            <motion.div  variants={itemVariants} className="projectName">{displayName}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectDesc">{gitHubData.description}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectModified">Last Modified: {getDateData()}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectName">{current.displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{current.desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectModified">Last Modified:</motion.div>
                             <motion.div  variants={itemVariants} className="projectGithubLink">
                                 <a href={current.html_url} className="projectGit">Check out the repo</a>
                             </motion.div>
@@ -85,8 +83,8 @@ function Projects() {
                                 <a href={current.homepage} className="projectLive">Test it out</a>
                             </motion.div>
                         </motion.div>
-                    </motion.div>
-                })}
+                    </motion.div>                  
+                }):null}
             </motion.div>
         </motion.div>
     )
