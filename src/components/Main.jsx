@@ -39,10 +39,10 @@ function Main(props) {
 
     return (
         // main wrapper start
-        <motion.div className='firstMain' initial="hidden"
+        <motion.div initial="hidden"
         animate="visible"
         exit={{ opacity: 0, transition: { duration: 1 } }}
-        variants={{ visible: { transition: { staggerChildren: 0.3 } } }}> className="mainWrapper page">
+        variants={{ visible: { transition: { staggerChildren: 0.3 } } }} className="mainWrapper page">
             {/* main start */}
             <motion.div  variants={itemVariants}  className="main">
                 {/* main banner wrapper start */}
@@ -72,19 +72,19 @@ function Main(props) {
                 {/* main banner wrapper end */}
                 </motion.div>
                     
-                {/* bio wrapper start */}
+                {/* filler wrapper start */}
                 <motion.div  variants={itemVariants}  className="fillerWrapper">
-                    {/* bio start */}
+                    {/* filler start */}
                     <motion.div  variants={itemVariants}  className="filler" style={{ 
                     backgroundImage: `url('${backgroundImg}')`,
                     backgroundPosition: 'center',
                     backgroundRepeat: 'none',
                     backgroundSize: 'cover',
                     }}>
-                        {/* <img src={coding} alt="" className="coding" /> */}
-                    {/* bio end */}
+
+                    {/* filler end */}
                     </motion.div>
-                {/* bio wrapper end */}
+                {/* filler wrapper end */}
                 </motion.div>
             {/* main end */}
             </motion.div>

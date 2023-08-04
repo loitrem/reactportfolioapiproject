@@ -2,6 +2,7 @@
   "name": "portfolioproject",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://loitrem.tplinkdns.com/",
   "dependencies": {
     "@steveeeie/react-page-transition": "^1.3.0",
     "@swup/slide-theme": "^2.0.0",

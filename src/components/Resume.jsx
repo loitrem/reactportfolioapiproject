@@ -14,7 +14,7 @@ const itemVariants = {
 
 function Resume() {
   return (
-    <motion.div className='resumeWrapper'  className="technologyWrapper" style={{backgroundImage: `url(${bgImg})`, 
+    <motion.div className='resumeWrapper' style={{backgroundImage: `url(${bgImg})`, 
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed'}} initial="hidden"
     animate="visible"
