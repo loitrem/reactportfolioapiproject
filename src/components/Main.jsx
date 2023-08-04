@@ -4,6 +4,15 @@ import erik from '../images/erik3.png'
 import Typed from 'typed.js'
 import backgroundImg from '../images/sepic2.jpg'
 import coding from '../images/coding.png'
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom";
+
+const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible
+};
 
 function Main(props) {
     let {setWeatherData}=useContext(AppContext);
@@ -30,40 +39,43 @@ function Main(props) {
 
     return (
         // main wrapper start
-        <div className="mainWrapper page">
+        <motion.div className='mainTest' initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0, transition: { duration: 1 } }}
+        variants={{ visible: { transition: { staggerChildren: 0.3 } } }}> className="mainWrapper page">
             {/* main start */}
-            <div className="main">
+            <motion.div  variants={itemVariants}  className="main">
                 {/* main banner wrapper start */}
-                <div className="mainBannerWrapper">
+                <motion.div  variants={itemVariants}  className="mainBannerWrapper">
                     {/* main banner start */}
-                    <div className="mainBanner">
+                    <motion.div  variants={itemVariants}  className="mainBanner">
                         {/* main banner left start */}
-                        <div className="mainBannerLeft">
-                            <div className="bioPage">
+                        <motion.div  variants={itemVariants}  className="mainBannerLeft">
+                            <motion.div  variants={itemVariants}  className="bioPage">
 
-                                <div className="bioDesc">{'> '}<span ref={typeVar}></span></div>
-                            </div>
+                                <motion.div  variants={itemVariants}  className="bioDesc">{'> '}<span ref={typeVar}></span></motion.div>
+                            </motion.div>
                         {/* main banner left end */}
-                        </div>
+                        </motion.div>
                         {/* main banner right start */}
-                        <div className="mainBannerRight">
-                            <div className="mainImg">
-                                <div className="userImgWrapper">
+                        <motion.div  variants={itemVariants}  className="mainBannerRight">
+                            <motion.div  variants={itemVariants}  className="mainImg">
+                                <motion.div  variants={itemVariants}  className="userImgWrapper">
                                     <img src={erik} alt="" className="userImg" />
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         
                         {/* main banner right end */}
-                        </div>
+                        </motion.div>
                     {/* main banner end */}
-                    </div>
+                    </motion.div>
                 {/* main banner wrapper end */}
-                </div>
+                </motion.div>
                     
                 {/* bio wrapper start */}
-                <div className="fillerWrapper">
+                <motion.div  variants={itemVariants}  className="fillerWrapper">
                     {/* bio start */}
-                    <div className="filler" style={{ 
+                    <motion.div  variants={itemVariants}  className="filler" style={{ 
                     backgroundImage: `url('${backgroundImg}')`,
                     backgroundPosition: 'center',
                     backgroundRepeat: 'none',
@@ -71,13 +83,13 @@ function Main(props) {
                     }}>
                         {/* <img src={coding} alt="" className="coding" /> */}
                     {/* bio end */}
-                    </div>
+                    </motion.div>
                 {/* bio wrapper end */}
-                </div>
+                </motion.div>
             {/* main end */}
-            </div>
+            </motion.div>
         {/* main wrapper end */}
-        </div>
+        </motion.div>
     )
 }
 
