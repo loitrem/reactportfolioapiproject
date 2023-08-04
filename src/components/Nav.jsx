@@ -16,7 +16,9 @@ const navigate = useNavigate();
                 <div className="navLinks" onClick={()=>{
                     navigate('/');
                 }}>{"<Projects />"}</div>
-                <div className="navLinks">{"<AboutMe />"}</div>
+                <div className="navLinks" onClick={()=>{
+                    navigate('/resume');
+                }}>{"<Resume />"}</div>
             </div>
         </div>
     )

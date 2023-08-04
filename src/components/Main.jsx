@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible
+    hidden: { opacity: 0, y: 10 },
+    visible
 };
 
 function Main(props) {
@@ -39,7 +39,7 @@ function Main(props) {
 
     return (
         // main wrapper start
-        <motion.div className='mainTest' initial="hidden"
+        <motion.div className='firstMain' initial="hidden"
         animate="visible"
         exit={{ opacity: 0, transition: { duration: 1 } }}
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}> className="mainWrapper page">

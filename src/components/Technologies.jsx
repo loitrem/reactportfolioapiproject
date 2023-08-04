@@ -22,14 +22,14 @@ function Technologies() {
     
 return (
 
-<motion.div className='technoTest' initial="hidden"
+<motion.div className='techno' initial="hidden"
     animate="visible"
     exit={{ opacity: 0, transition: { duration: 1 } }}
     variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
-    <motion.div className="technologyWrapper page" style={{backgroundImage: `url(${bgImg})`, 
+    <motion.div className="technologyWrapper" style={{backgroundImage: `url(${bgImg})`, 
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed'}}>
-        <motion.div  variants={itemVariants} className="test">
+        <motion.div  variants={itemVariants} className="backgroundDarker">
         <motion.div  variants={itemVariants} className="technology">
             <motion.div  variants={itemVariants} className="techCell topCell">
                 <motion.div  variants={itemVariants} className="techCellLeft">

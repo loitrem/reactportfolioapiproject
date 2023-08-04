@@ -19,6 +19,9 @@ function App() {
     },{
       path: '/technologies',
       element: <Technologies />
+    },{
+      path: '/resume',
+      element: <Resume />
     }
   ])
 
