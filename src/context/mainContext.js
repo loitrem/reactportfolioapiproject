@@ -1,9 +1,8 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext } from "react";
 
 //create and export global state management
 export const AppContext=createContext();
 
-console.log('mainContext');
     // create react functional component
     const AppContextProvider = (props) => {
 
@@ -11,9 +10,6 @@ console.log('mainContext');
     const [weatherData, setWeatherData] = useState(null);
     const [githubData, setGithubData] = useState('');
     const [ip, setIP] = useState('');
-    // const [product, setProduct]=useState(1);
-    // const [productNum, setProductNum]=useState(1);
-    // const [categories, setCategories]=useState('');
 
     return (
             //gives state access to entire app

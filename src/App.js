@@ -6,6 +6,7 @@ import ApiCalls from './components/ApiCalls';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
 import Technologies from './components/Technologies';
+import Projects from './components/Projects';
 import { AnimatePresence } from "framer-motion";
 import { useLocation, useRoutes } from "react-router-dom";
 
@@ -19,6 +20,9 @@ function App() {
     },{
       path: '/technologies',
       element: <Technologies />
+    },{
+      path: '/projects',
+      element: <Projects />
     },{
       path: '/resume',
       element: <Resume />

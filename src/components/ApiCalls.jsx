@@ -1,14 +1,16 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect,useState, useContext } from 'react'
 import axios from 'axios'
 import Main from './Main';
 import apikeys from '../models/apikeys.js'
+import {AppContext} from '../context/mainContext'
 
 
 function ApiCalls() {
 
+    let {gitHubData, setGitHubData}=useContext(AppContext);
+
     //set use states - temp?
     let [weatherData, setWeatherData]=useState(null)
-    let [gitHubData, setGitHubData]=useState(null)
     let [ipData, setIpData]=useState(null)
     let [locationData, setLocationData]=useState(null)
 
@@ -17,7 +19,7 @@ function ApiCalls() {
     //api calls
     //github api
     const getGitHubData = async() => {
-        let res = await axios.get('https://api.github.com/users/loitrem', {
+        let res = await axios.get('https://api.github.com/users/loitrem/repos?per_page=100&sort=created', {
                 method: "GET",
                 headers: {
                     'Authorization': apikeys.REACT_APP_GITHUB_API_KEY,
