@@ -36,7 +36,7 @@ function ApiCalls() {
 
     const getLocationData = async() => {
         if (ipData){ 
-            let res = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apikeys.REACT_APP_IP_KEY}&ip=${ipData}`);
+            let res = await axios.get(`http://ipwho.is/${ipData}`);
             console.log('LOCATION RES = ',res.data);
             setLocationData(res.data);
             }

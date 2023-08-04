@@ -20,8 +20,12 @@ function Header() {
                             <div className="userInfo"> {"UserInfo"}</div>
                             <div className="equals">{"="}</div>
                             <div className="bracket">{"{"}</div>
-                            <div className="objItem">{" Email:"}</div>
-                            <div >{" 'ekowalski1982@gmail.com',"}</div>
+                            <div className="emailLink" onClick={()=>{
+                                window.location = 'mailto:ekowalski1982@gmail.com'
+                            }}>
+                                <div className="objItem">{" Email:"}</div>
+                                <div >{" 'ekowalski1982@gmail.com',"}</div>
+                            </div>
                             <div className="website"> </div> 
                             <div className="objItem">{" Website:"}</div> 
                             <div><a href="http://loitrem.tplinkdns.com/perscholas/" className="websiteLink">'loitrem.com'</a></div>

@@ -30,7 +30,7 @@ function Main(props) {
 
     return (
         // main wrapper start
-        <div className="mainWrapper">
+        <div className="mainWrapper page">
             {/* main start */}
             <div className="main">
                 {/* main banner wrapper start */}

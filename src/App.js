@@ -6,19 +6,20 @@ import Footer from './components/Footer';
 import Resume from './components/Resume';
 import Technologies from './components/Technologies';
 
-
 function App() {
-    return (
-    <div className="App">     
-        <Header />
+
+return (
+  <div className="App">
+      <Header />
       <Routes>
         <Route path="/"  element={<ApiCalls/>} />
         <Route path="/resume"  element={<Resume />} />
         <Route path="/technologies"  element={<Technologies />} />
       </Routes>
       <Footer />
-    </div>
-  );
+  </div>
+);
 }
 
 export default App;
+

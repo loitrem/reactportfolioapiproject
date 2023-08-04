@@ -7,14 +7,17 @@ import javaImg from '../images/java.png'
 import nodeImg from '../images/node.png'
 import phpImg from '../images/php.png'
 import sqlImg from '../images/sql.png'
-import matrix from '../images/matrix.gif'
+import bgImg from '../images/bg2.jpg'
 
 function Technologies() {
 
 return (
 
 
-    <div className="technologyWrapper" style={{backgroundImage: `url(${matrix})`, backgroundSize: 'cover'}}>
+    <div className="technologyWrapper page" style={{backgroundImage: `url(${bgImg})`, 
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed'}}>
+        <div className="test">
         <div className="technology">
             <div className="techCell topCell">
                 <div className="techCellLeft">
@@ -71,7 +74,7 @@ return (
                 </div>
                 <div className="techCellRight">Node.js</div>
             </div>
-
+            </div>
         </div>
     </div>
   )
