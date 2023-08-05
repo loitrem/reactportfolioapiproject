@@ -1,4 +1,3 @@
-import React from 'react'
 import javascriptImg from '../images/javascript.png'
 import reactImg from '../images/react.png'
 import cssImg from '../images/css.png'
@@ -10,6 +9,8 @@ import sqlImg from '../images/sql.png'
 import bgImg from '../images/bg2.jpg'
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
+import React, {useContext, useState, useEffect} from 'react'
+import { AppContext } from '../context/mainContext';
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -19,6 +20,23 @@ const itemVariants = {
 };
 
 function Technologies() {
+
+    let {weatherData, setWeatherData}=useContext(AppContext);
+    const [currentWeather, setCurrentWeather]=useState(null)
+
+    useEffect(() => {
+
+        // Update session storage
+        if (weatherData){
+            localStorage.setItem("weatherData", JSON.stringify(weatherData));
+        }
+        
+
+        if (!weatherData){
+            setCurrentWeather(JSON.parse(localStorage.getItem("weatherData")));
+            setWeatherData(JSON.parse(localStorage.getItem("weatherData")));
+        }
+    }, []);
     
 return (
 

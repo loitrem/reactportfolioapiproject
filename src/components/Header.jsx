@@ -1,9 +1,27 @@
-import React from 'react'
 import logo from '../images/logo.png'
 import Weather from './Weather';
 import Nav from './Nav';
+import React, {useContext, useState, useEffect} from 'react'
+import { AppContext } from '../context/mainContext';
 
 function Header() {
+    let {weatherData, setWeatherData}=useContext(AppContext);
+    const [currentWeather, setCurrentWeather]=useState(null)
+
+    useEffect(() => {
+
+        // Update session storage
+        if (weatherData){
+            localStorage.setItem("weatherData", JSON.stringify(weatherData));
+        }
+        
+
+        if (!weatherData){
+            setCurrentWeather(JSON.parse(localStorage.getItem("weatherData")));
+            setWeatherData(JSON.parse(localStorage.getItem("weatherData")));
+        }
+    }, []);
+
     return (
         <div className="headerWrapper">
             <div className="headerTop"><Weather /></div>
