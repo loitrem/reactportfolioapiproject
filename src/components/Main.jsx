@@ -3,7 +3,6 @@ import { AppContext } from '../context/mainContext';
 import erik from '../images/erik3.png'
 import Typed from 'typed.js'
 import backgroundImg from '../images/sepic2.jpg'
-import coding from '../images/coding.png'
 import { motion } from "framer-motion"
 
 

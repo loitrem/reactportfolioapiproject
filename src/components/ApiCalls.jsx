@@ -10,11 +10,9 @@ function ApiCalls() {
     let {gitHubData, setGitHubData}=useContext(AppContext);
 
     //set use states - temp?
-    let [weatherData, setWeatherData]=useState(null)
-    let [ipData, setIpData]=useState(null)
-    let [locationData, setLocationData]=useState(null)
-
-    //use context here - ?
+    let [weatherData, setWeatherData]=useState(null);
+    let [ipData, setIpData]=useState(null);
+    let [locationData, setLocationData]=useState(null);
 
     //api calls
     //github api

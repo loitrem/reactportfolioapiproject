@@ -1,6 +1,4 @@
 import { motion } from "framer-motion"
-
-
 import resume from '../files/resume.pdf'
 import bgImg from '../images/bg2.jpg'
 import React, {useContext, useState, useEffect} from 'react'

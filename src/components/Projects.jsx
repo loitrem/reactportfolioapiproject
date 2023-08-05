@@ -19,10 +19,6 @@ function Projects(props) {
 
     const navigate = useNavigate();
 
-    // let {gitHubData, setGitHubData}=useContext(AppContext);
-
-    // console.log('GITHUBDATA', gitHubData);
-
     let projectInfo = [{
         name: 'reactgroupretailproject',
         displayName: 'Retail Mockup',
@@ -40,24 +36,6 @@ function Projects(props) {
         displayName: 'ATM Mockup',
         img: atm
     }]  
-    
-    // useEffect(()=>{
-
-    // },[])
-
-
-    // if (gitHubData){
-    //     for (let a = 0;a<projectInfo.length;a++){   
-    //         gitHubData.map((current, i)=>{
-    //             if (current.name===projectInfo[a].name){
-    //                 projectInfo[a].desc = current.description;
-    //                 projectInfo[a].html = current.html_url;
-    //                 projectInfo[a].homepage = current.homepage;
-    //             } 
-    //         })
-    
-    //     }  
-    // }
 
     console.log('||||||||||||||||||||||',props.commitData);
     return (

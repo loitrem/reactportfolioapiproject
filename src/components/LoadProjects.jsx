@@ -1,7 +1,7 @@
 import React from 'react'
-import {useContext, useEffect, useState} from 'react'
+import {useContext, useEffect} from 'react'
 import { AppContext } from '../context/mainContext';
-import { calcLength, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import alien from '../images/alien.jpg'
 import atm from '../images/atm.jpg'
 import jungle from '../images/jungle.jpg'
