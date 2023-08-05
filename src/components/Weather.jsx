@@ -1,8 +1,24 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import { AppContext } from '../context/mainContext';
 
 function Weather() {
-    let {weatherData}=useContext(AppContext);
+    let {weatherData, setWeatherData}=useContext(AppContext);
+    const [currentWeather, setCurrentWeather]=useState(null)
+
+    useEffect(() => {
+
+        // Update session storage
+        if (weatherData){
+            localStorage.setItem("weatherData", JSON.stringify(weatherData));
+        }
+        
+
+        if (!weatherData){
+            setCurrentWeather(JSON.parse(localStorage.getItem("weatherData")));
+            setWeatherData(JSON.parse(localStorage.getItem("weatherData")));
+        }
+    }, []);
+
     console.log(weatherData);
     if (weatherData){
         return (

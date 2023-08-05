@@ -16,13 +16,13 @@ const itemVariants = {
     visible
 };
 
-function Projects() {
+function Projects(props) {
 
     const navigate = useNavigate();
 
-    let {gitHubData, setGitHubData}=useContext(AppContext);
+    // let {gitHubData, setGitHubData}=useContext(AppContext);
 
-    console.log('GITHUBDATA', gitHubData);
+    // console.log('GITHUBDATA', gitHubData);
 
     let projectInfo = [{
         name: 'reactgroupretailproject',
@@ -42,25 +42,25 @@ function Projects() {
         img: atm
     }]  
     
-    useEffect(()=>{
+    // useEffect(()=>{
 
-    },[])
+    // },[])
 
 
-    if (gitHubData){
-        for (let a = 0;a<projectInfo.length;a++){   
-            gitHubData.map((current, i)=>{
-                if (current.name===projectInfo[a].name){
-                    projectInfo[a].desc = current.description;
-                    projectInfo[a].html = current.html_url;
-                    projectInfo[a].homepage = current.homepage;
-                } 
-            })
+    // if (gitHubData){
+    //     for (let a = 0;a<projectInfo.length;a++){   
+    //         gitHubData.map((current, i)=>{
+    //             if (current.name===projectInfo[a].name){
+    //                 projectInfo[a].desc = current.description;
+    //                 projectInfo[a].html = current.html_url;
+    //                 projectInfo[a].homepage = current.homepage;
+    //             } 
+    //         })
     
-        }  
-    }
+    //     }  
+    // }
 
-    console.log('||||||||||||||||||||||',projectInfo);
+    console.log('||||||||||||||||||||||',props.commitData);
     return (
         <motion.div className="projectsWrapper" initial="hidden"
             style={{backgroundImage: `url(${bgImg})`, 
@@ -78,14 +78,14 @@ function Projects() {
                             </motion.div>
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
-                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[0].displayName}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[0].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[0].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[0].desc}</motion.div>
                             <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
-                                {window.location.href =projectInfo[0].html}
+                                {window.location.href =props.projectInfo[0].html}
                                 }}>Check out the repo
                             </motion.div>
                             <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
-                                {window.location.href =projectInfo[0].homepage}
+                                {window.location.href =props.projectInfo[0].homepage}
                                 }}>Try it out
                             </motion.div>
                         </motion.div>
@@ -94,18 +94,18 @@ function Projects() {
                     <motion.div variants={itemVariants} className="projectCell">
                         <motion.div  variants={itemVariants} className="projectCellLeft">
                             <motion.div  variants={itemVariants} className="projectCellScreenShot">
-                                <img src={projectInfo[1].img} alt="" className="projectScreenshotImg" />
+                                <img src={props.projectInfo[1].img} alt="" className="projectScreenshotImg" />
                             </motion.div>
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
-                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[1].displayName}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[1].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[1].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[1].desc}</motion.div>
                             <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
-                                {window.location.href =projectInfo[1].html}
+                                {window.location.href =props.projectInfo[1].html}
                                 }}>Check out the repo
                             </motion.div>
                             <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
-                                {window.location.href =projectInfo[1].homepage}
+                                {window.location.href =props.projectInfo[1].homepage}
                                 }}>Try it out
                             </motion.div>
                         </motion.div>
@@ -114,17 +114,17 @@ function Projects() {
                     <motion.div  variants={itemVariants} className="projectCell">
                         <motion.div  variants={itemVariants} className="projectCellLeft">
                             <motion.div  variants={itemVariants} className="projectCellScreenShot">
-                                <img src={projectInfo[2].img} alt="" className="projectScreenshotImg" />
+                                <img src={props.projectInfo[2].img} alt="" className="projectScreenshotImg" />
                             </motion.div>
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
-                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[2].displayName}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[2].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[2].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[2].desc}</motion.div>
                             <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
-                                    {window.location.href =projectInfo[2].html}
+                                    {window.location.href =props.projectInfo[2].html}
                             }}>Check out the repo</motion.div>
                             <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
-                                    {window.location.href =projectInfo[2].homepage}
+                                    {window.location.href =props.projectInfo[2].homepage}
                             }}>Try it out</motion.div>
                         </motion.div>
                     </motion.div> 
@@ -132,17 +132,18 @@ function Projects() {
                     <motion.div  variants={itemVariants} className="projectCell">
                         <motion.div  variants={itemVariants} className="projectCellLeft">
                             <motion.div  variants={itemVariants} className="projectCellScreenShot">
-                                <img src={projectInfo[3].img} alt="" className="projectScreenshotImg" />
+                                <img src={props.projectInfo[3].img} alt="" className="projectScreenshotImg" />
                             </motion.div>
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
-                            <motion.div  variants={itemVariants} className="projectName">{projectInfo[3].displayName}</motion.div>
-                            <motion.div  variants={itemVariants} className="projectDesc">{projectInfo[3].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[3].displayName}</motion.div>
+                            <motion.div className="projectDesc">props.commitData[0].commit.author.date</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[3].desc}</motion.div>
                             <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
-                                    {window.location.href =projectInfo[3].html}
+                                    {window.location.href =props.projectInfo[3].html}
                             }}>Check out the repo</motion.div>
                             <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
-                                    {window.location.href =projectInfo[3].homepage}
+                                    {window.location.href =props.projectInfo[3].homepage}
                             }}>Try it out</motion.div>
                         </motion.div>
                     </motion.div> 
