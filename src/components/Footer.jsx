@@ -27,7 +27,7 @@ function Footer() {
                   <a href='https://github.com/loitrem/reactportfolioapiproject' className="downloadResume">Check out my github</a>
                 </div>
                 <div className="footerRight">
-                  <a href="www.loitrem.com" className="footerWebsite">Website: loitrem.com</a>
+                  <a href="www.loitrem.com/perscholas" className="footerWebsite">Website: loitrem.com</a>
                   </div>
             </div>
         </div>
