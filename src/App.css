@@ -273,6 +273,7 @@ width: 100%;
 .mainBannerWrapper {
   width: 100%;
   border-bottom: 1px solid rgb(65, 65, 65);
+  border-top: 1px solid rgb(65, 65, 65);
 }
 
 .mainBanner {
