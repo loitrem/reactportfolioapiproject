@@ -1,9 +1,10 @@
-import React from 'react'
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
 import PdfViewer from './PdfViewer';
 import resume from '../files/resume.pdf'
 import bgImg from '../images/bg2.jpg'
+import React, {useContext, useState, useEffect} from 'react'
+import { AppContext } from '../context/mainContext';
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -13,6 +14,24 @@ const itemVariants = {
 };
 
 function Resume() {
+
+  let {weatherData, setWeatherData}=useContext(AppContext);
+  const [currentWeather, setCurrentWeather]=useState(null)
+
+  useEffect(() => {
+
+      // Update session storage
+      if (weatherData){
+          localStorage.setItem("weatherData", JSON.stringify(weatherData));
+      }
+      
+
+      if (!weatherData){
+          setCurrentWeather(JSON.parse(localStorage.getItem("weatherData")));
+          setWeatherData(JSON.parse(localStorage.getItem("weatherData")));
+      }
+  }, []);
+  
   return (
     <motion.div className='resumeWrapper' style={{backgroundImage: `url(${bgImg})`, 
     backgroundSize: 'cover',

@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react'
 import { motion } from "framer-motion"
-import {useContext, useState} from 'react'
-import { AppContext } from '../context/mainContext';
 import alien from '../images/alien.jpg'
 import atm from '../images/atm.jpg'
 import jungle from '../images/jungle.jpg'
 import rpg from '../images/rpg.jpg'
 import bgImg from '../images/bg2.jpg'
 import { useNavigate } from 'react-router-dom'
+import React, {useContext, useState, useEffect} from 'react'
+import { AppContext } from '../context/mainContext';
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
