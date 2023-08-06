@@ -5,8 +5,7 @@ import jungle from '../images/jungle.jpg'
 import rpg from '../images/rpg.jpg'
 import bgImg from '../images/bg2.jpg'
 import { useNavigate } from 'react-router-dom'
-import React, {useContext, useState, useEffect} from 'react'
-import { AppContext } from '../context/mainContext';
+import React from 'react'
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 

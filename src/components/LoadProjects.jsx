@@ -94,7 +94,7 @@ function LoadProjects() {
     exit={{ opacity: 0, transition: { duration: 1 } }}
     variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
 
-        <Projects repoData={repoData} projectInfo={projectInfo}/>
+        <Projects projectInfo={projectInfo}/>
 
     </motion.div>
     )

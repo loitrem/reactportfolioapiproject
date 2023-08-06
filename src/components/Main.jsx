@@ -5,7 +5,6 @@ import Typed from 'typed.js'
 import backgroundImg from '../images/sepic2.jpg'
 import { motion } from "framer-motion"
 
-
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
