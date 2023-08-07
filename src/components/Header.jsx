@@ -42,7 +42,7 @@ function Header() {
                                 window.location = 'mailto:ekowalski1982@gmail.com'
                             }}>
                                 <div className="objItem">{" Email:"}</div>
-                                <div >{" 'ekowalski1982@gmail.com',"}</div>
+                                <div className="websiteLink">{" 'ekowalski1982@gmail.com',"}</div>
                             </div>
                             <div className="website"> </div> 
                             <div className="objItem">{" Website:"}</div> 

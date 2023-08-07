@@ -35,7 +35,7 @@ function Resume() {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed'}}>
       <div className="darkerbg">
-          <object className="resumeDisplay" data={resume} type="application/pdf" width="100%" height="100%"></object>
+          {navigator.pdfViewerEnabled ? <object className="resumeDisplay" data={resume} type="application/pdf" width="100%" height="100%"></object> :<div className='mobileWrapper'><div className='mobile'><a href={resume} className="downloadResumeMobile">Download Resume</a></div></div>}
       </div>
       
   </motion.div>

@@ -113,7 +113,6 @@ function Projects(props) {
                         </motion.div>
                         <motion.div  variants={itemVariants} className="projectCellRight">
                             <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[3].displayName}</motion.div>
-                            <motion.div className="projectDesc">props.commitData[0].commit.author.date</motion.div>
                             <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[3].desc}</motion.div>
                             <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
                                     {window.location.href =props.projectInfo[3].html}

@@ -19,12 +19,27 @@ function Main(props) {
 
     //typed.js dependency/library @ https://github.com/mattboldt/typed.js
     const typeVar = React.useRef(null);
-
+    console.log(window.innerWidth, '******************************');
     useEffect(()=> {
 
+        let newString = []; 
+
+        if (window.innerWidth> 1250){
+            newString = "Hi, I'm Erik. " + "<br/><br/><span style='font-size: 26px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'
+        } else if (window.innerWidth> 1050&& window.innerWidth<1249){
+            newString = "Hi, I'm Erik. " + "<br/><br/><span style='font-size: 22px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'
+        } else if (window.innerWidth> 900&& window.innerWidth<1049){
+            newString = "Hi, I'm Erik. " + "<br/><br/><span style='font-size: 20px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'
+        } else if (window.innerWidth> 700&& window.innerWidth<899){
+            newString = "Hi, I'm Erik. " + "<br/><br/><span style='font-size: 18px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'
+        } else if (window.innerWidth> 500&& window.innerWidth<699){
+            newString = "Hi, I'm Erik. " + "<br/><br/><span style='font-size: 16px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'
+        } else if (window.innerWidth> 350&& window.innerWidth<499){
+            newString = "Hi, I'm Erik. " + "<br/><br/><span style='font-size: 14px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'
+        }
         //typed.js dependency/library @ https://github.com/mattboldt/typed.js
         const typed = new Typed(typeVar.current, {
-            strings: ["Hi, I'm Erik. " + "<br/><br/><span style='font-size: 26px'>" + " I am a software engineer from Pittsburgh, PA." + '</span>'],
+            strings: [newString],
             typeSpeed: 100,
             loop: false
         })

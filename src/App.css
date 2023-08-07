@@ -1,5 +1,5 @@
 .App {
-  height: 100vh;
+  height: 99vh;
   width: 99vw;
   text-align: center;
   display: flex;
@@ -7,612 +7,3461 @@
   color: rgb(6, 154, 50);
   background-color: rgb(32, 32, 32);
   font-family:monospace;
-  --swup-slide-theme-translate: 60px;
-  --swup-slide-theme-duration-fade: .3s;
-  --swup-slide-theme-duration-slide: .4s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (min-width: 1250px) {
+  /* HEADER PAGE *********************************************************************************** */
+  .headerWrapper {
+    width: 100%;
+    /* background-color: rgb(24, 6, 146); */
+    color: whitesmoke;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .header {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .headerTop{
+  width: 100%;
   }
-}
-
-/* HEADER PAGE *********************************************************************************** */
-.headerWrapper {
-  width: 100%;
-  /* background-color: rgb(24, 6, 146); */
-  color: whitesmoke;
-}
-
-.header {
-  width: 100%;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.headerTop{
-width: 100%;
-}
-
-.headerBottom {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px solid rgb(65, 65, 65);
-}
-
-.headerLeft {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: left;
-}
-
-.headerLogo {
-  width: 200px;
-  height: 150px;
-}
-
-.headerRight {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: right;
-}
-
-.website {
-  margin-top: 35px;  
-  margin-right: 20px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: whitesmoke;
-}
-
-.websiteLink {
-  margin-right: 2px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  color: whitesmoke;
-}
-
-.websiteLink:hover {
-  margin-right: 2px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  color: rgb(200, 206, 40);
-}
-
-.contactMe {
-  margin-top: 35px;
-  margin-right: 15px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  color: whitesmoke;
-  display: flex;
-}
-
-.const {
-  color: rgb(110, 110, 255);
-  margin-right: 10px;
-}
-
-.userInfo {
-  color: rgb(255, 255, 187);
-  margin-right: 5px;
-}
-
-.equals {
-  margin-right: 5px;
-}
-
-.bracket {
-  color: yellow;
-}
-
-.emailLink {
-  display: flex;
-}
-
-.emailLink:hover {
-  display: flex;
-  color: rgb(200, 206, 40);
-}
-
-.objItem {
-  color: rgb(153, 198, 220);
-}
-
-.headerNavWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-
-/* NAVBAR ************************************************************************************** */
-
-.navWrapper {
-  width: 100%;
-  margin-left: 50px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: whitesmoke;
-}
-
-.navLinks {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.navLinks:hover {
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(135, 177, 148);
-  cursor: pointer;
-}
-
-/* WEATHER PAGE ******************************************************************************** */
-
-.weatherWrapper {
-  width: 100%;
-  border-bottom: 1px solid rgb(65, 65, 65);
-  background-color: rgb(32, 32, 32);
-  font-size: 16px;
-}
-
-.mainWeather {
-  width: 80%;
-  line-height: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: rgb(6, 154, 50);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.location {
-  display: flex;
-}
-
-.locationText {
-  font-weight: bold;
-}
-
-.locationData {
-  font-weight: normal;
-  margin-left: 10px;
-}
-
-.currentTemp {
-  display: flex;
-}
-
-.currentTempText {
-  font-weight: bold;
-}
-
-.currentTempData {
-  font-weight: normal;
-  margin-left: 10px;
-}
-
-.weatherCondition {
-  display: flex;
-  align-items: center;
-}
-
-.weatherConditionText {
-  font-weight: bold;
-}
-
-.weatherConditionData {
-  font-weight: normal;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.weatherIcon {
-  width: 40px;
-}
-
-/* MAIN PAGE *********************************************************************************** */
-
-.main {
-  background-color: rgb(32, 32, 32);
-}
-
-.mainBannerWrapper {
-  width: 100%;
-  border-bottom: 1px solid rgb(65, 65, 65);
-  border-top: 1px solid rgb(65, 65, 65);
-}
-
-.mainBanner {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.mainBannerLeft{
-  width: 50%;
-}
-.mainImg{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.userImgWrapper {
-  width: 45%;
-
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.userImg {
-  width: 100%;
-  height: 100%;
-  opacity: .6;
-}
-
-.mainBannerRight {
-  width: 50%;
-}
-
-.bioPage {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items:end;
-  justify-content: center;
-  font-family:monospace;
-}
-
-.bioDesc {
-  font-size: 60px;
-  font-weight: bold;
-  width: 80%;
-  margin-bottom: 60px;
-  text-align: left;
-}
-
-.fillerWrapper {
-  width: 100%;
-  height: 300px;
-}
-.filler {
-  height: 100%;
-  width: 100%;
-  opacity: 90%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.coding {
-  height: 120%;
-  margin-left: 100px;
-}
-
-.bgDarker {
-  background-color: rgba(0, 0, 0, .85);
-}
-
-
-/* Technologies ********************************************************************************* */
-
-.technologyWrapper {
-  width: 100%;
-  background-color: rgb(32, 32, 32);
-}
-
-.technology {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(32, 32, 32);
-}
-
-.techCell {
-  display: flex;
-  height: 255px;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(69, 69, 69);
-  border-right: 1px solid rgb(69, 69, 69);
-  border-left: 1px solid rgb(69, 69, 69);
-  transition: height 0.5s;
-}
-
-.techCell:hover {
-  height: 300px;
-  background-color: rgb(42, 42, 42);
-}
-
-.topCell {
-  border-top: 1px solid rgb(69, 69, 69);
-}
-
-.techCellLeft{
-  width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.backgroundDarker {
-  background-color: rgba(0, 0, 0, .85);
-}
-
-.techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
-  height: 250px;
-}
-
-
-.techCellRight {
-  width: 65%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  font-size: 50px;
-  text-align: left;
-  transition: height 1s;
-}
-
-
-/* FOOTER *************************************************************************************** */
-
-.footerWrapper {
-  width: 100%;
-  height: 300px;
-  border-top: 1px solid rgb(65, 65, 65);
-  background-color: rgb(32, 32, 32);
-}
-
-.footerTop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.triangleWrapper {
-  width: 1%;
-  padding: 5px;
-  border: 1px inset rgb(6, 154, 50); 
-  margin: 15px;
-}
-
-.triangleWrapper:hover {
-  width: 1%;
-  padding: 5px;
-  background-color: rgb(55, 55, 55);
-  margin: 15px;
-  cursor: pointer;
-}
-
-.triangle {
-  height: 8px;
-}
-
-.footerTopText {
-  font-size: 16px;
-}
-
-.footerBottom {
-  width: 100%;
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.footerLeft{
-  width: 33%;
-  /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
-}
-
-.footerEmail {
-  font-size: 16px;
-  color: rgb(6, 154, 50);
-  cursor: pointer;
-}
-
-.footerEmail:hover {
-  font-size: 16px;
-  color: rgb(135, 177, 148);
-  cursor: pointer;
-}
-
-.footerCenter {
-  width: 33%;
-  font-size: 16px;
-
-}
-
-.downloadResume {
-  text-decoration: none;
+
+  .headerBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+
+  .headerLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+  }
+
+  .headerRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .website {
+    margin-top: 35px;  
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink:hover {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(200, 206, 40);
+  }
+
+  .contactMe {
+    margin-top: 35px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+  }
+
+  .const {
+    color: rgb(110, 110, 255);
+    margin-right: 10px;
+  }
+
+  .userInfo {
+    color: rgb(255, 255, 187);
+    margin-right: 5px;
+  }
+
+  .equals {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    color: yellow;
+  }
+
+  .emailLink {
+    display: flex;
+  }
+
+  .emailLink:hover {
+    display: flex;
+    color: rgb(200, 206, 40);
+  }
+
+  .objItem {
+    color: rgb(153, 198, 220);
+  }
+
+  .headerNavWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* NAVBAR ************************************************************************************** */
+
+  .navWrapper {
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+  }
+
+  .navLinks {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .navLinks:hover {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  /* WEATHER PAGE ******************************************************************************** */
+
+  .weatherWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+    font-size: 16px;
+  }
+
+  .mainWeather {
+    width: 80%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     color: rgb(6, 154, 50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+  }
+
+  .locationText {
+    font-weight: bold;
+  }
+
+  .locationData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .currentTemp {
+    display: flex;
+  }
+
+  .currentTempText {
+    font-weight: bold;
+  }
+
+  .currentTempData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .weatherCondition {
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherConditionText {
+    font-weight: bold;
+  }
+
+  .weatherConditionData {
+    font-weight: normal;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherIcon {
+    width: 40px;
+  }
+
+  /* MAIN PAGE *********************************************************************************** */
+
+  .main {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .mainBannerWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .mainBanner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .mainBannerLeft{
+    width: 50%;
+  }
+  .mainImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userImgWrapper {
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .userImg {
+    width: 427px;
+    height: 372px;
+    opacity: .6;
+  }
+
+  .mainBannerRight {
+    width: 50%;
+    display: flex;
+    align-items: end;
+  }
+
+  .bioPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    font-family:monospace;
+  }
+
+  .bioDesc {
+    font-size: 60px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 60px;
+    text-align: left;
+  }
+
+  .fillerWrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .filler {
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .coding {
+    height: 120%;
+    margin-left: 100px;
+  }
+
+  .bgDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+
+  /* Technologies ********************************************************************************* */
+
+  .technologyWrapper {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .technology {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .techCell {
+    display: flex;
+    height: 255px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    border-left: 1px solid rgb(69, 69, 69);
+    transition: height 0.5s;
+  }
+
+  .techCell:hover {
+    height: 300px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .topCell {
+    border-top: 1px solid rgb(69, 69, 69);
+  }
+
+  .techCellLeft{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .backgroundDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
+    height: 250px;
+  }
+
+
+  .techCellRight {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 50px;
+    text-align: left;
+    transition: height 1s;
+  }
+
+
+  /* FOOTER *************************************************************************************** */
+
+  .footerWrapper {
+    width: 100%;
+    height: 300px;
+    border-top: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triangleWrapper {
+    width: 1%;
+    padding: 5px;
+    border: 1px inset rgb(6, 154, 50); 
+    margin: 15px;
+  }
+
+  .triangleWrapper:hover {
+    width: 1%;
+    padding: 5px;
+    background-color: rgb(55, 55, 55);
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .triangle {
+    height: 8px;
+  }
+
+  .footerTopText {
+    font-size: 16px;
+  }
+
+  .footerBottom {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .footerLeft{
+    width: 33%;
+    /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
+  }
+
+  .footerEmail {
+    font-size: 16px;
+    color: rgb(6, 154, 50);
+    cursor: pointer;
+  }
+
+  .footerEmail:hover {
+    font-size: 16px;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  .footerCenter {
+    width: 33%;
+    font-size: 16px;
+
+  }
+
+  .downloadResume {
+    text-decoration: none;
+      color: rgb(6, 154, 50);
+  }
+
+  .downloadResume:hover {
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  .footerRight {
+    width: 33%;
+    font-size: 16px;
+  }
+
+  .footerWebsite {
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(6, 154, 50);
+  }
+
+  .footerWebsite:hover {
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  /* RESUME *************************************************************************************** */
+
+  .resumeWrapper {
+    width: 100%;
+    height: 99vh;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .darkerbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .resumeDisplay {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PROJECTS ************************************************************************************* */
+
+  .projectsWrapper {
+    width: 100%;
+  }
+
+  .backgroundTop {
+      background-color: rgba(0, 0, 0,0.85);
+  }
+
+  .projects{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .projectCell{
+    width: 100%;
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .projectCellLeft {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .projectScreenshotImg {
+    width: 95%;
+    border: 2px solid rgb(65, 65, 65);
+  }
+
+  .projectCellRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .projectName {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .projectModified {
+    font-size: 16px;
+  }
+
+  .projectGithubLink{
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .projectGithubLink:hover{
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+  .projectLiveLink {
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .projectLiveLink:hover {
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
 }
 
-.downloadResume:hover {
-  text-decoration: none;
-  color: rgb(135, 177, 148);
-}
+@media only screen and (min-width: 1050px) and (max-width: 1249px) {
+  /* HEADER PAGE *********************************************************************************** */
+  .headerWrapper {
+    width: 100%;
+    /* background-color: rgb(24, 6, 146); */
+    color: whitesmoke;
+  }
 
-.footerRight {
-  width: 33%;
-  font-size: 16px;
-}
+  .header {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.footerWebsite {
-  font-size: 16px;
-  text-decoration: none;
-  color: rgb(6, 154, 50);
-}
-
-.footerWebsite:hover {
-  font-size: 16px;
-  text-decoration: none;
-  color: rgb(135, 177, 148);
-}
-
-/* RESUME *************************************************************************************** */
-
-.resumeWrapper {
+  .headerTop{
   width: 100%;
-  height: 99vh;
-  background-color: rgb(32, 32, 32);
+  }
+
+  .headerBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+
+  .headerLeft {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerRight {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .website {
+    margin-top: 35px;  
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink:hover {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(200, 206, 40);
+  }
+
+  .contactMe {
+    margin-top: 35px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+  }
+
+  .const {
+    color: rgb(110, 110, 255);
+    margin-right: 10px;
+  }
+
+  .userInfo {
+    color: rgb(255, 255, 187);
+    margin-right: 5px;
+  }
+
+  .equals {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    color: yellow;
+  }
+
+  .emailLink {
+    display: flex;
+  }
+
+  .emailLink:hover {
+    display: flex;
+    color: rgb(200, 206, 40);
+  }
+
+  .objItem {
+    color: rgb(153, 198, 220);
+  }
+
+  .headerNavWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* NAVBAR ************************************************************************************** */
+
+  .navWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+  }
+
+  .navLinks {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .navLinks:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  /* WEATHER PAGE ******************************************************************************** */
+
+  .weatherWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+    font-size: 12px;
+  }
+
+  .mainWeather {
+    width: 80%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(6, 154, 50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+  }
+
+  .locationText {
+    font-weight: bold;
+  }
+
+  .locationData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .currentTemp {
+    display: flex;
+  }
+
+  .currentTempText {
+    font-weight: bold;
+  }
+
+  .currentTempData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .weatherCondition {
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherConditionText {
+    font-weight: bold;
+  }
+
+  .weatherConditionData {
+    font-weight: normal;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherIcon {
+    width: 40px;
+  }
+
+  /* MAIN PAGE *********************************************************************************** */
+
+  .main {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .mainBannerWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .mainBanner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .mainBannerLeft{
+    width: 50%;
+  }
+  .mainImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userImgWrapper {
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .userImg {
+    width: 427px;
+    height: 372px;
+    opacity: .6;
+  }
+
+  .mainBannerRight {
+    width: 50%;
+    display: flex;
+    align-items: end;
+  }
+
+  .bioPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    font-family:monospace;
+  }
+
+  .bioDesc {
+    font-size: 60px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 60px;
+    text-align: left;
+  }
+
+  .fillerWrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .filler {
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .coding {
+    height: 120%;
+    margin-left: 100px;
+  }
+
+  .bgDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+
+  /* Technologies ********************************************************************************* */
+
+  .technologyWrapper {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .technology {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .techCell {
+    display: flex;
+    height: 255px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    border-left: 1px solid rgb(69, 69, 69);
+    transition: height 0.5s;
+  }
+
+  .techCell:hover {
+    height: 300px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .topCell {
+    border-top: 1px solid rgb(69, 69, 69);
+  }
+
+  .techCellLeft{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .backgroundDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
+    height: 250px;
+  }
+
+
+  .techCellRight {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 50px;
+    text-align: left;
+    transition: height 1s;
+  }
+
+
+  /* FOOTER *************************************************************************************** */
+
+  .footerWrapper {
+    width: 100%;
+    height: 300px;
+    border-top: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triangleWrapper {
+    width: 1%;
+    padding: 5px;
+    border: 1px inset rgb(6, 154, 50); 
+    margin: 15px;
+  }
+
+  .triangleWrapper:hover {
+    width: 1%;
+    padding: 5px;
+    background-color: rgb(55, 55, 55);
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .triangle {
+    height: 8px;
+  }
+
+  .footerTopText {
+    font-size: 16px;
+  }
+
+  .footerBottom {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .footerLeft{
+    width: 33%;
+    /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
+  }
+
+  .footerEmail {
+    font-size: 16px;
+    color: rgb(6, 154, 50);
+    cursor: pointer;
+  }
+
+  .footerEmail:hover {
+    font-size: 16px;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  .footerCenter {
+    width: 33%;
+    font-size: 16px;
+
+  }
+
+  .downloadResume {
+    text-decoration: none;
+      color: rgb(6, 154, 50);
+  }
+
+  .downloadResume:hover {
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  .footerRight {
+    width: 33%;
+    font-size: 16px;
+  }
+
+  .footerWebsite {
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(6, 154, 50);
+  }
+
+  .footerWebsite:hover {
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  /* RESUME *************************************************************************************** */
+
+  .resumeWrapper {
+    width: 100%;
+    height: 99vh;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .darkerbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .resumeDisplay {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PROJECTS ************************************************************************************* */
+
+  .projectsWrapper {
+    width: 100%;
+  }
+
+  .backgroundTop {
+      background-color: rgba(0, 0, 0,0.85);
+  }
+
+  .projects{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .projectCell{
+    width: 100%;
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .projectCellLeft {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .projectScreenshotImg {
+    width: 95%;
+    border: 2px solid rgb(65, 65, 65);
+  }
+
+  .projectCellRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .projectName {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .projectModified {
+    font-size: 16px;
+  }
+
+  .projectGithubLink{
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .projectGithubLink:hover{
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+  .projectLiveLink {
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .projectLiveLink:hover {
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
 }
 
-.darkerbg {
+@media screen and (min-width: 900px) and (max-width: 1049px) {
+  /* HEADER PAGE *********************************************************************************** */
+  .headerWrapper {
+    width: 100%;
+    /* background-color: rgb(24, 6, 146); */
+    color: whitesmoke;
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .headerTop{
+  width: 100%;
+  }
+
+  .headerBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+
+  .headerLeft {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerRight {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .website {
+    margin-top: 35px;  
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink:hover {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(200, 206, 40);
+  }
+
+  .contactMe {
+    margin-top: 35px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+  }
+
+  .const {
+    color: rgb(110, 110, 255);
+    margin-right: 10px;
+  }
+
+  .userInfo {
+    color: rgb(255, 255, 187);
+    margin-right: 5px;
+  }
+
+  .equals {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    color: yellow;
+  }
+
+  .emailLink {
+    display: flex;
+  }
+
+  .emailLink:hover {
+    display: flex;
+    color: rgb(200, 206, 40);
+  }
+
+  .objItem {
+    color: rgb(153, 198, 220);
+  }
+
+  .headerNavWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* NAVBAR ************************************************************************************** */
+
+  .navWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+  }
+
+  .navLinks {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .navLinks:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  /* WEATHER PAGE ******************************************************************************** */
+
+  .weatherWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+    font-size: 12px;
+  }
+
+  .mainWeather {
+    width: 80%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(6, 154, 50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+  }
+
+  .locationText {
+    font-weight: bold;
+  }
+
+  .locationData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .currentTemp {
+    display: flex;
+  }
+
+  .currentTempText {
+    font-weight: bold;
+  }
+
+  .currentTempData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .weatherCondition {
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherConditionText {
+    font-weight: bold;
+  }
+
+  .weatherConditionData {
+    font-weight: normal;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherIcon {
+    width: 40px;
+  }
+
+  /* MAIN PAGE *********************************************************************************** */
+
+  .main {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .mainBannerWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .mainBanner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .mainBannerLeft{
+    width: 50%;
+  }
+  .mainImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userImgWrapper {
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .userImg {
+    width: 427px;
+    height: 372px;
+    opacity: .6;
+  }
+
+  .mainBannerRight {
+    width: 50%;
+    display: flex;
+    align-items: end;
+  }
+
+  .bioPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    font-family:monospace;
+  }
+
+  .bioDesc {
+    font-size: 45px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 45px;
+    text-align: left;
+  }
+
+  .fillerWrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .filler {
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .coding {
+    height: 120%;
+    margin-left: 100px;
+  }
+
+  .bgDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+
+  /* Technologies ********************************************************************************* */
+
+  .technologyWrapper {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .technology {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .techCell {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    border-left: 1px solid rgb(69, 69, 69);
+    transition: height 0.5s;
+  }
+
+  .techCell:hover {
+    height: 235px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .topCell {
+    border-top: 1px solid rgb(69, 69, 69);
+  }
+
+  .techCellLeft{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .backgroundDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
+    height: 175px;
+  }
+
+
+  .techCellRight {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 40px;
+    text-align: left;
+    transition: height 1s;
+  }
+
+
+  /* FOOTER *************************************************************************************** */
+
+  .footerWrapper {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footer {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triangleWrapper {
+    width: 1%;
+    padding: 5px;
+    border: 1px inset rgb(6, 154, 50); 
+    margin: 15px;
+  }
+
+  .triangleWrapper:hover {
+    width: 1%;
+    padding: 5px;
+    background-color: rgb(55, 55, 55);
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .triangle {
+    height: 8px;
+  }
+
+  .footerTopText {
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-color: rgb(32, 32, 32);
+    padding-bottom: 25px;
+  }
+
+  .footerLeft{
+    width: 33%;
+    /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
+  }
+
+  .footerEmail {
+    font-size: 12px;
+    color: rgb(6, 154, 50);
+    cursor: pointer;
+  }
+
+  .footerEmail:hover {
+    font-size: 12px;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  .footerCenter {
+    width: 33%;
+    font-size: 12px;
+
+  }
+
+  .downloadResume {
+    text-decoration: none;
+      color: rgb(6, 154, 50);
+  }
+
+  .downloadResume:hover {
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  .footerRight {
+    width: 33%;
+    font-size: 12px;
+  }
+
+  .footerWebsite {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(6, 154, 50);
+  }
+
+  .footerWebsite:hover {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  /* RESUME *************************************************************************************** */
+
+  .resumeWrapper {
+    width: 100%;
+    height: 99vh;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .darkerbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .resumeDisplay {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PROJECTS ************************************************************************************* */
+
+  .projectsWrapper {
+    width: 100%;
+  }
+
+  .backgroundTop {
+      background-color: rgba(0, 0, 0,0.85);
+  }
+
+  .projects{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .projectCell{
+    width: 100%;
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .projectCellLeft {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .projectScreenshotImg {
+    width: 95%;
+    border: 2px solid rgb(65, 65, 65);
+  }
+
+  .projectCellRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .projectName {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .projectDesc {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .projectGithubLink{
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+  }
+
+  .projectGithubLink:hover{
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+  .projectLiveLink {
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+  }
+
+  .projectLiveLink:hover {
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 899px) {
+  /* HEADER PAGE *********************************************************************************** */
+  .headerWrapper {
+    width: 100%;
+    /* background-color: rgb(24, 6, 146); */
+    color: whitesmoke;
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .headerTop{
+  width: 100%;
+  }
+
+  .headerBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+
+  .headerLeft {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerRight {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .website {
+    margin-top: 35px;  
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink:hover {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(200, 206, 40);
+  }
+
+  .contactMe {
+    margin-top: 35px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+  }
+
+  .const {
+    color: rgb(110, 110, 255);
+    margin-right: 10px;
+  }
+
+  .userInfo {
+    color: rgb(255, 255, 187);
+    margin-right: 5px;
+  }
+
+  .equals {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    color: yellow;
+  }
+
+  .emailLink {
+    display: flex;
+  }
+
+  .emailLink:hover {
+    display: flex;
+    color: rgb(200, 206, 40);
+  }
+
+  .objItem {
+    color: rgb(153, 198, 220);
+  }
+
+  .headerNavWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* NAVBAR ************************************************************************************** */
+
+  .navWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+  }
+
+  .navLinks {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .navLinks:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  /* WEATHER PAGE ******************************************************************************** */
+
+  .weatherWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+    font-size: 12px;
+  }
+
+  .mainWeather {
+    width: 80%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(6, 154, 50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+  }
+
+  .locationText {
+    font-weight: bold;
+  }
+
+  .locationData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .currentTemp {
+    display: flex;
+  }
+
+  .currentTempText {
+    font-weight: bold;
+  }
+
+  .currentTempData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .weatherCondition {
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherConditionText {
+    font-weight: bold;
+  }
+
+  .weatherConditionData {
+    font-weight: normal;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherIcon {
+    width: 25px;
+  }
+
+  /* MAIN PAGE *********************************************************************************** */
+
+  .main {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .mainBannerWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .mainBanner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .mainBannerLeft{
+    width: 60%;
+  }
+  .mainImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userImgWrapper {
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .userImg {
+    width: 327px;
+    height: 272px;
+    opacity: .6;
+  }
+
+  .mainBannerRight {
+    width: 40%;
+    display: flex;
+    align-items: end;
+  }
+
+  .bioPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    font-family:monospace;
+  }
+
+  .bioDesc {
+    font-size: 35px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 45px;
+    text-align: left;
+  }
+
+  .fillerWrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .filler {
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .coding {
+    height: 120%;
+    margin-left: 100px;
+  }
+
+  .bgDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+
+
+  /* Technologies ********************************************************************************* */
+
+  .technologyWrapper {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .technology {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .techCell {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    border-left: 1px solid rgb(69, 69, 69);
+    transition: height 0.5s;
+  }
+
+  .techCell:hover {
+    height: 235px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .topCell {
+    border-top: 1px solid rgb(69, 69, 69);
+  }
+
+  .techCellLeft{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .backgroundDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
+    height: 175px;
+  }
+
+
+  .techCellRight {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 40px;
+    text-align: left;
+    transition: height 1s;
+  }
+
+
+  /* FOOTER *************************************************************************************** */
+
+  .footerWrapper {
+    width: 100%;
+    height: 250px;
+    border-top: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triangleWrapper {
+    width: 1%;
+    padding: 5px;
+    border: 1px inset rgb(6, 154, 50); 
+    margin: 15px;
+  }
+
+  .triangleWrapper:hover {
+    width: 1%;
+    padding: 5px;
+    background-color: rgb(55, 55, 55);
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .triangle {
+    height: 8px;
+  }
+
+  .footerTopText {
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .footerLeft{
+    width: 33%;
+    /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
+  }
+
+  .footerEmail {
+    font-size: 12px;
+    color: rgb(6, 154, 50);
+    cursor: pointer;
+  }
+
+  .footerEmail:hover {
+    font-size: 12px;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  .footerCenter {
+    width: 33%;
+    font-size: 12px;
+
+  }
+
+  .downloadResume {
+    text-decoration: none;
+      color: rgb(6, 154, 50);
+  }
+
+  .downloadResume:hover {
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  .footerRight {
+    width: 33%;
+    font-size: 12px;
+  }
+
+  .footerWebsite {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(6, 154, 50);
+  }
+
+  .footerWebsite:hover {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  /* RESUME *************************************************************************************** */
+
+  .resumeWrapper {
+    width: 100%;
+    height: 99vh;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .darkerbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .resumeDisplay {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PROJECTS ************************************************************************************* */
+
+  .projectsWrapper {
+    width: 100%;
+  }
+
+  .backgroundTop {
+      background-color: rgba(0, 0, 0,0.85);
+  }
+
+  .projects{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .projectCell{
+    width: 100%;
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .projectCellLeft {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .projectScreenshotImg {
+    width: 95%;
+    border: 2px solid rgb(65, 65, 65);
+  }
+
+  .projectCellRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .projectName {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .projectDesc {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .projectGithubLink{
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+  }
+
+  .projectGithubLink:hover{
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+  .projectLiveLink {
+    margin-top: 15px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+  }
+
+  .projectLiveLink:hover {
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px) {
+  /* HEADER PAGE *********************************************************************************** */
+  .headerWrapper {
+    width: 100%;
+    /* background-color: rgb(24, 6, 146); */
+    color: whitesmoke;
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .headerTop{
+  width: 100%;
+  }
+
+  .headerBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+
+  .headerLeft {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerRight {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .website {
+    margin-top: 35px;  
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink:hover {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(200, 206, 40);
+  }
+
+  .contactMe {
+    margin-top: 35px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+  }
+
+  .const {
+    color: rgb(110, 110, 255);
+    margin-right: 11px;
+  }
+
+  .userInfo {
+    color: rgb(255, 255, 187);
+    margin-right: 5px;
+  }
+
+  .equals {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    color: yellow;
+  }
+
+  .emailLink {
+    display: flex;
+  }
+
+  .emailLink:hover {
+    display: flex;
+    color: rgb(200, 206, 40);
+  }
+
+  .objItem {
+    color: rgb(153, 198, 220);
+  }
+
+  .headerNavWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* NAVBAR ************************************************************************************** */
+
+  .navWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+    margin-top: 15px;
+  }
+
+  .navLinks {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .navLinks:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  /* WEATHER PAGE ******************************************************************************** */
+
+  .weatherWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+    font-size: 10px;
+  }
+
+  .mainWeather {
+    width: 90%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(6, 154, 50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+  }
+
+  .locationText {
+    font-weight: bold;
+  }
+
+  .locationData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .currentTemp {
+    display: flex;
+  }
+
+  .currentTempText {
+    font-weight: bold;
+  }
+
+  .currentTempData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .weatherCondition {
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherConditionText {
+    font-weight: bold;
+  }
+
+  .weatherConditionData {
+    font-weight: normal;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherIcon {
+    width: 25px;
+  }
+
+  /* MAIN PAGE *********************************************************************************** */
+
+  .main {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .mainBannerWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .mainBanner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .mainBannerLeft{
+    width: 60%;
+  }
+  .mainImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userImgWrapper {
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .userImg {
+    width: 227px;
+    height: 212px;
+    opacity: .6;
+  }
+
+  .mainBannerRight {
+    width: 45%;
+    display: flex;
+    align-items: end;
+  }
+
+  .bioPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    font-family:monospace;
+  }
+
+  .bioDesc {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 45px;
+    text-align: left;
+  }
+
+  .fillerWrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .filler {
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .coding {
+    height: 120%;
+    margin-left: 100px;
+  }
+
+  .bgDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+
+
+  /* Technologies ********************************************************************************* */
+
+  .technologyWrapper {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .technology {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .techCell {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    border-left: 1px solid rgb(69, 69, 69);
+    transition: height 0.5s;
+  }
+
+  .techCell:hover {
+    height: 235px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .topCell {
+    border-top: 1px solid rgb(69, 69, 69);
+  }
+
+  .techCellLeft{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .backgroundDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
+    height: 150px;
+  }
+
+
+  .techCellRight {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 30px;
+    text-align: left;
+    transition: height 1s;
+  }
+
+
+  /* FOOTER *************************************************************************************** */
+
+  .footerWrapper {
+    width: 100%;
+    height: 250px;
+    border-top: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triangleWrapper {
+    width: 25px;
+    padding: 5px;
+    border: 1px inset rgb(6, 154, 50); 
+    margin: 15px;
+  }
+
+  .triangleWrapper:hover {
+    width: 25px;
+    padding: 5px;
+    background-color: rgb(55, 55, 55);
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .triangle {
+    height: 8px;
+  }
+
+  .footerTopText {
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .footerLeft{
+    width: 33%;
+    /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
+  }
+
+  .footerEmail {
+    font-size: 10px;
+    color: rgb(6, 154, 50);
+    cursor: pointer;
+  }
+
+  .footerEmail:hover {
+    font-size: 10px;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  .footerCenter {
+    width: 33%;
+    font-size: 10px;
+
+  }
+
+  .downloadResume {
+    text-decoration: none;
+      color: rgb(6, 154, 50);
+  }
+
+  .downloadResume:hover {
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  .footerRight {
+    width: 33%;
+    font-size: 10px;
+  }
+
+  .footerWebsite {
+    font-size: 10px;
+    text-decoration: none;
+    color: rgb(6, 154, 50);
+  }
+
+  .footerWebsite:hover {
+    font-size: 10px;
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  /* RESUME *************************************************************************************** */
+
+  .resumeWrapper {
+    width: 100%;
+    height: 99vh;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .darkerbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .resumeDisplay {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PROJECTS ************************************************************************************* */
+
+  .projectsWrapper {
+    width: 100%;
+  }
+
+  .backgroundTop {
+      background-color: rgba(0, 0, 0,0.85);
+  }
+
+  .projects{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .projectCell{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .projectCellLeft {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .projectScreenshotImg {
+    width: 95%;
+    border: 2px solid rgb(65, 65, 65);
+  }
+
+  .projectCellRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .projectName {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .projectDesc {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .projectGithubLink{
+    margin-top: 10px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+  }
+
+  .projectGithubLink:hover{
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+  .projectLiveLink {
+    margin-top: 10px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .projectLiveLink:hover {
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 499px) {
+  /* HEADER PAGE *********************************************************************************** */
+  .headerWrapper {
+    width: 100%;
+    /* background-color: rgb(24, 6, 146); */
+    color: whitesmoke;
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .headerTop{
+  width: 100%;
+  }
+
+  .headerBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+
+  .headerLeft {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerRight {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .website {
+    margin-top: 35px;  
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .websiteLink:hover {
+    margin-right: 2px;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: bold;
+    color: rgb(200, 206, 40);
+  }
+
+  .contactMe {
+    margin-top: 35px;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+  }
+
+  .const {
+    color: rgb(110, 110, 255);
+    margin-right: 11px;
+  }
+
+  .userInfo {
+    color: rgb(255, 255, 187);
+    margin-right: 5px;
+  }
+
+  .equals {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    color: yellow;
+  }
+
+  .emailLink {
+    display: flex;
+  }
+
+  .emailLink:hover {
+    display: flex;
+    color: rgb(200, 206, 40);
+  }
+
+  .objItem {
+    color: rgb(153, 198, 220);
+  }
+
+  .headerNavWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* NAVBAR ************************************************************************************** */
+
+  .navWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+    margin-top: 15px;
+  }
+
+  .navLinks {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .navLinks:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  /* WEATHER PAGE ******************************************************************************** */
+
+  .weatherWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+    font-size: 8px;
+  }
+
+  .mainWeather {
+    width: 90%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(6, 154, 50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+  }
+
+  .locationText {
+    font-weight: bold;
+  }
+
+  .locationData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .currentTemp {
+    display: flex;
+  }
+
+  .currentTempText {
+    font-weight: bold;
+  }
+
+  .currentTempData {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .weatherCondition {
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherConditionText {
+    font-weight: bold;
+  }
+
+  .weatherConditionData {
+    font-weight: normal;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .weatherIcon {
+    width: 20px;
+  }
+
+  /* MAIN PAGE *********************************************************************************** */
+
+  .main {
+    background-color: rgb(32, 32, 32);
+  }
+
+  .mainBannerWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .mainBanner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .mainBannerLeft{
+    width: 45%;
+  }
+  .mainImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userImgWrapper {
+    width: 55%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .userImg {
+    width: 227px;
+    height: 212px;
+    opacity: .6;
+  }
+
+  .mainBannerRight {
+    width: 55%;
+    display: flex;
+    align-items: end;
+  }
+
+  .bioPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    font-family:monospace;
+  }
+
+  .bioDesc {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 45px;
+    text-align: left;
+  }
+
+  .fillerWrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .filler {
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .coding {
+    height: 120%;
+    margin-left: 100px;
+  }
+
+  .bgDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+
+
+  /* Technologies ********************************************************************************* */
+
+  .technologyWrapper {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .technology {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .techCell {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    border-left: 1px solid rgb(69, 69, 69);
+    transition: height 0.5s;
+  }
+
+  .techCell:hover {
+    height: 235px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .topCell {
+    border-top: 1px solid rgb(69, 69, 69);
+  }
+
+  .techCellLeft{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .backgroundDarker {
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .techJsImg,.techReactImg,.techHtmlImg,.techCssImg,.techJavaImg,.techPhpImg,.techSqlImg,.techNodeImg {
+    height: 100px;
+  }
+
+
+  .techCellRight {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    margin-left: 25px;
+    align-items: center;
+    font-size: 22px;
+    text-align: left;
+    transition: height 1s;
+  }
+
+
+  /* FOOTER *************************************************************************************** */
+
+  .footerWrapper {
+    width: 100%;
+    height: 250px;
+    border-top: 1px solid rgb(65, 65, 65);
+    background-color: rgb(32, 32, 32);
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triangleWrapper {
+    width: 25px;
+    padding: 5px;
+    border: 1px inset rgb(6, 154, 50); 
+    margin: 15px;
+  }
+
+  .triangleWrapper:hover {
+    width: 25px;
+    padding: 5px;
+    background-color: rgb(55, 55, 55);
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .triangle {
+    height: 8px;
+  }
+
+  .footerTopText {
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .footerLeft{
+    width: 33%;
+    /* box-shadow: 0px 0px 25px rgb(255, 119, 0), inset 0px 0px 25px rgb(255, 119, 0); */
+  }
+
+  .footerEmail {
+    font-size: 10px;
+    color: rgb(6, 154, 50);
+    cursor: pointer;
+  }
+
+  .footerEmail:hover {
+    font-size: 10px;
+    color: rgb(135, 177, 148);
+    cursor: pointer;
+  }
+
+  .footerCenter {
+    width: 33%;
+    font-size: 10px;
+
+  }
+
+  .downloadResume {
+    text-decoration: none;
+      color: rgb(6, 154, 50);
+  }
+
+  .downloadResume:hover {
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  .footerRight {
+    width: 33%;
+    font-size: 10px;
+  }
+
+  .footerWebsite {
+    font-size: 10px;
+    text-decoration: none;
+    color: rgb(6, 154, 50);
+  }
+
+  .footerWebsite:hover {
+    font-size: 10px;
+    text-decoration: none;
+    color: rgb(135, 177, 148);
+  }
+
+  /* RESUME *************************************************************************************** */
+
+  .resumeWrapper {
+    width: 100%;
+    height: 99vh;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .darkerbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+
+  .resumeDisplay {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PROJECTS ************************************************************************************* */
+
+  .projectsWrapper {
+    width: 100%;
+  }
+
+  .backgroundTop {
+      background-color: rgba(0, 0, 0,0.85);
+  }
+
+  .projects{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .projectCell{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    border-top: 1px solid rgb(65, 65, 65);
+  }
+
+  .projectCellLeft {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .projectScreenshotImg {
+    width: 95%;
+    border: 2px solid rgb(65, 65, 65);
+  }
+
+  .projectCellRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .projectName {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .projectDesc {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .projectGithubLink{
+    margin-top: 10px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+  }
+
+  .projectGithubLink:hover{
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+  .projectLiveLink {
+    margin-top: 10px;
+    border: 1px solid green;
+    width: 175px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .projectLiveLink:hover {
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+}
+
+
+.mobileWrapper {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .85);
-}
-
-.resumeDisplay {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* PROJECTS ************************************************************************************* */
-
-.projectsWrapper {
-  width: 100%;
-}
-
-.backgroundTop {
-    background-color: rgba(0, 0, 0,0.85);
-}
-
-.projects{
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-.projectCell{
-  width: 100%;
   display: flex;
-  background-color: rgb(32, 32, 32);
-  border-top: 1px solid rgb(65, 65, 65);
-}
-
-.projectCellLeft {
-  width: 100%;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-
-}
-
-.projectScreenshotImg {
-  width: 95%;
-  border: 2px solid rgb(65, 65, 65);
-}
-
-.projectCellRight {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: start;
-  margin-left: 30px;
-  font-size: 22px;
-  line-height: 40px;
+  align-items: center;
 }
 
-.projectName {
-  font-size: 36px;
+.mobile {
+
+}
+
+.downloadResumeMobile{
+  border: 2px solid lightgray;
+  padding: 30px;
+  font-size: 26px;
   font-weight: bold;
-}
-
-.projectModified {
-  font-size: 16px;
-}
-
-.projectGithubLink{
-  margin-top: 15px;
-  border: 1px solid green;
-  width: 300px;
-  cursor: pointer;
-}
-
-.projectGithubLink:hover{
-  background-color: green;
   color: whitesmoke;
-  border: 1px solid whitesmoke;
+  text-decoration: none;
+  background-color: rgb(32, 32, 32);
+  border-radius: 20px;
 }
-
-
-
-.projectLiveLink {
-  margin-top: 15px;
-  border: 1px solid green;
-  width: 300px;
-  cursor: pointer;
-}
-
-.projectLiveLink:hover {
-  background-color: green;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-}
-
-
