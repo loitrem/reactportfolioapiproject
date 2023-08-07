@@ -4,8 +4,6 @@
   "private": true,
   "homepage": "http://loitrem.tplinkdns.com/",
   "dependencies": {
-    "@steveeeie/react-page-transition": "^1.3.0",
-    "@swup/slide-theme": "^2.0.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

@@ -1,4 +1,3 @@
-import logo from '../images/logo.png'
 import Weather from './Weather';
 import Nav from './Nav';
 import React, {useContext, useState, useEffect} from 'react'
