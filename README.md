@@ -12,7 +12,7 @@ The approach I decided to take for this was to go for more of a programming/ ret
 <hr>
 
 ## You can view this project live at
-[a link](http://loitrem.tplinkdns.com/)
+[View the project live here](http://loitrem.tplinkdns.com/)
 
 <hr>
 
