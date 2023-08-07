@@ -3010,7 +3010,7 @@
   }
 
   .navLinks:hover {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: rgb(135, 177, 148);
     cursor: pointer;
@@ -3038,6 +3038,7 @@
 
   .location {
     display: flex;
+    flex-direction: column;
   }
 
   .locationText {
@@ -3051,6 +3052,7 @@
 
   .currentTemp {
     display: flex;
+    flex-direction: column;
   }
 
   .currentTempText {
@@ -3065,6 +3067,7 @@
   .weatherCondition {
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
 
   .weatherConditionText {
