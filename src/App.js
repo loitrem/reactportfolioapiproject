@@ -26,6 +26,9 @@ function App() {
     },{
       path: '/resume',
       element: <Resume />
+    },{
+      path: '*',
+      element: <ApiCalls/>
     }
   ])
 

@@ -1,14 +1,14 @@
-import React from 'react'
-import {useContext, useEffect} from 'react'
+import React from 'react';
+import {useContext, useEffect} from 'react';
 import { AppContext } from '../context/mainContext';
-import { motion } from "framer-motion"
-import alien from '../images/alien.jpg'
-import atm from '../images/atm.jpg'
-import jungle from '../images/jungle.jpg'
-import rpg from '../images/rpg.jpg'
+import { motion } from "framer-motion";
+import alien from '../images/alien.jpg';
+import atm from '../images/atm.jpg';
+import jungle from '../images/jungle.jpg';
+import rpg from '../images/rpg.jpg';
 import Projects from './Projects';
 import axios from 'axios';
-import apikeys from '../models/apikeys.js'
+import apikeys from '../models/apikeys.js';
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -25,21 +25,17 @@ function LoadProjects() {
     console.log('*************************************************************************************************************');
 
     let {gitHubData, setGitHubData}=useContext(AppContext);
-
-
-    useEffect(() => {
-
-        // Update session storage
+    useEffect(()=>{
         if (gitHubData){
+            // Update session storage    
             localStorage.setItem("gitHubData", JSON.stringify(gitHubData));
-            console.log('LOCAL STORAGE INFO GETTING = '. localStorage,'---', gitHubData);
         }
-        
 
         if (!gitHubData){
             setGitHubData(JSON.parse(localStorage.getItem("gitHubData")));
         }
-    }, []);
+    },[])
+    
 
     let projectInfo = [{
         name: 'reactgroupretailproject',

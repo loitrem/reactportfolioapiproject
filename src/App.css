@@ -521,8 +521,17 @@
 
   }
 
+  .projectCellScreenShot {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .projectScreenshotImg {
-    width: 95%;
+    max-width: 95%;
+    max-height: 95%;
     border: 2px solid rgb(65, 65, 65);
   }
 
@@ -542,8 +551,10 @@
     font-weight: bold;
   }
 
-  .projectModified {
-    font-size: 16px;
+  .projectDesc {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
   }
 
   .projectGithubLink{
@@ -1104,12 +1115,14 @@
   }
 
   .projectName {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
   }
 
-  .projectModified {
-    font-size: 16px;
+  .projectDesc {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
   }
 
   .projectGithubLink{
