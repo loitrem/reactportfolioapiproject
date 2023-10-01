@@ -4,6 +4,8 @@ import atm from '../images/atm.jpg'
 import jungle from '../images/jungle.jpg'
 import rpg from '../images/rpg.jpg'
 import bgImg from '../images/bg2.jpg'
+import git from '../images/git.png'
+import warthunder from '../images/warthunder.png'
 import { useNavigate } from 'react-router-dom'
 import React from 'react'
 
@@ -26,6 +28,14 @@ function Projects(props) {
         name: 'week6project',
         displayName: 'Turn based RPG game',
         img: rpg
+    },{
+        name: 'week4Day2Homework',
+        displayName: 'War Thunder Website Mockup',
+        img: warthunder
+    },{
+        name: 'gitSiteMockup',
+        displayName: 'Git Website Mockup',
+        img: git
     },{
         name: 'saveTheUniverseGame',
         displayName: 'Alien Invasion',
@@ -122,6 +132,43 @@ function Projects(props) {
                             }}>Try it out</motion.div>
                         </motion.div>
                     </motion.div> 
+
+                    <motion.div  variants={itemVariants} className="projectCell">
+                        <motion.div  variants={itemVariants} className="projectCellLeft">
+                            <motion.div  variants={itemVariants} className="projectCellScreenShot">
+                                <img src={props.projectInfo[4].img} alt="" className="projectScreenshotImg" />
+                            </motion.div>
+                        </motion.div>
+                        <motion.div  variants={itemVariants} className="projectCellRight">
+                            <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[4].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[4].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
+                                    {window.location.href =props.projectInfo[4].html}
+                            }}>Check out the repo</motion.div>
+                            <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
+                                    {window.location.href =props.projectInfo[4].homepage}
+                            }}>Try it out</motion.div>
+                        </motion.div>
+                    </motion.div> 
+
+                    <motion.div  variants={itemVariants} className="projectCell">
+                        <motion.div  variants={itemVariants} className="projectCellLeft">
+                            <motion.div  variants={itemVariants} className="projectCellScreenShot">
+                                <img src={props.projectInfo[5].img} alt="" className="projectScreenshotImg" />
+                            </motion.div>
+                        </motion.div>
+                        <motion.div  variants={itemVariants} className="projectCellRight">
+                            <motion.div  variants={itemVariants} className="projectName">{props.projectInfo[5].displayName}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectDesc">{props.projectInfo[5].desc}</motion.div>
+                            <motion.div  variants={itemVariants} className="projectGithubLink" onClick={()=>{
+                                    {window.location.href =props.projectInfo[5].html}
+                            }}>Check out the repo</motion.div>
+                            <motion.div  variants={itemVariants} className="projectLiveLink" onClick={()=>{
+                                    {window.location.href =props.projectInfo[5].homepage}
+                            }}>Try it out</motion.div>
+                        </motion.div>
+                    </motion.div> 
+
                 </motion.div>
             </motion.div>
         </motion.div>
