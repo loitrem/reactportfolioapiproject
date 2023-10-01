@@ -6,6 +6,8 @@ import alien from '../images/alien.jpg';
 import atm from '../images/atm.jpg';
 import jungle from '../images/jungle.jpg';
 import rpg from '../images/rpg.jpg';
+import git from '../images/git.png'
+import warthunder from '../images/warthunder.png'
 import Projects from './Projects';
 import axios from 'axios';
 import apikeys from '../models/apikeys.js';
