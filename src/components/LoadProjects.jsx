@@ -46,6 +46,14 @@ function LoadProjects() {
         displayName: 'Turn based RPG game',
         img: rpg
     },{
+        name: 'week4Day2Homework',
+        displayName: 'War Thunder Website Mockup',
+        img: warthunder
+    },{
+        name: 'gitSiteMockup',
+        displayName: 'Git Website Mockup',
+        img: git
+    },{
         name: 'saveTheUniverseGame',
         displayName: 'Alien Invasion',
         img: alien
