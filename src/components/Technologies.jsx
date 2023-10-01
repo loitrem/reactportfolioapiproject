@@ -7,8 +7,9 @@ import nodeImg from '../images/node.png'
 import phpImg from '../images/php.png'
 import sqlImg from '../images/sql.png'
 import bgImg from '../images/bg2.jpg'
+import expressImg from '../images/express.png'
+import mongodbImg from '../images/mongodb.png'
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom";
 import React, {useContext, useState, useEffect} from 'react'
 import { AppContext } from '../context/mainContext';
 
@@ -104,6 +105,21 @@ return (
                 </motion.div>
                 <motion.div  variants={itemVariants} className="techCellRight">Node.js</motion.div>
             </motion.div>
+
+            <motion.div  variants={itemVariants} className="techCell">
+                <motion.div  variants={itemVariants} className="techCellLeft">
+                    <img className='techNodeImg' src={expressImg} alt="" />
+                </motion.div>
+                <motion.div  variants={itemVariants} className="techCellRight">Express.js</motion.div>
+            </motion.div>
+
+            <motion.div  variants={itemVariants} className="techCell">
+                <motion.div  variants={itemVariants} className="techCellLeft">
+                    <img className='techNodeImg' src={mongodbImg} alt="" />
+                </motion.div>
+                <motion.div  variants={itemVariants} className="techCellRight">MongoDb</motion.div>
+            </motion.div>
+
             </motion.div>
         </motion.div>
     </motion.div>
